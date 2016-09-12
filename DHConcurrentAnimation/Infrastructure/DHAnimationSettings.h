@@ -17,6 +17,7 @@
 @property (nonatomic, strong) void(^completion)(BOOL);
 @property (nonatomic) NSTimeInterval startTime;
 @property (nonatomic) NSTimeInterval duration;
+@property (nonatomic) NSTimeInterval elapsedTime;
 @property (nonatomic) NSInteger columnCount;
 @property (nonatomic) NSInteger rowCount;
 @property (nonatomic) NSBKeyframeAnimationFunction timingFunction;

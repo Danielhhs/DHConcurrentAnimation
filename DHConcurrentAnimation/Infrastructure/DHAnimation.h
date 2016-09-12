@@ -16,4 +16,6 @@
 - (void) setupWithSettings:(DHAnimationSettings *)settings;
 - (void) start;
 
+- (void) updateWithTimeInterval:(NSTimeInterval)timeInterval;
+
 @end
