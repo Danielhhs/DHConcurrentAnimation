@@ -12,14 +12,17 @@
 
 @interface DHAnimationSettings : NSObject
 
+@property (nonatomic, weak) UIView *targetView;
 @property (nonatomic, weak) GLKView *animationView;
 
 @property (nonatomic, strong) void(^completion)(BOOL);
 @property (nonatomic) NSTimeInterval startTime;
 @property (nonatomic) NSTimeInterval duration;
-@property (nonatomic) NSTimeInterval elapsedTime;
 @property (nonatomic) NSInteger columnCount;
 @property (nonatomic) NSInteger rowCount;
+//Setting this property to YES will not rotate the position of the vertex, while the textureCoords will be rotated;
+//Setting thie property to NO will rotate the position of the vertex, while the textureCoords is a normal texture;
+@property (nonatomic) BOOL rotateTexture;
 @property (nonatomic) NSBKeyframeAnimationFunction timingFunction;
 @property (nonatomic) DHAnimationDirection direction;
 @property (nonatomic) DHAnimationEvent event;
