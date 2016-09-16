@@ -15,7 +15,7 @@
     [self generateGeometryAttributes];
     [self generateIndicesData];
     self.vertexData = [NSData dataWithBytesNoCopy:geometryAttribtues length:sizeof(DHSceneGeometryAttribtues) * self.vertexCount freeWhenDone:YES];
-    self.indexData = [NSData dataWithBytesNoCopy:indices length:sizeof(GLuint) * self.vertexCount freeWhenDone:YES];
+    self.indexData = [NSData dataWithBytesNoCopy:indices length:sizeof(GLuint) * self.indexCount freeWhenDone:YES];
     [self prepareToDraw];
 }
 

@@ -20,6 +20,12 @@ typedef NS_ENUM(NSInteger, DHAnimationEvent) {
     DHAnimationEventBuiltOut,
 };
 
+typedef NS_ENUM(NSInteger, DHAnimationTriggerEvent) {
+    DHAnimationTriggerEventByTime,
+    DHAnimationTriggerEventByTap,
+    DHAnimationTriggerEventStartSimutanously,
+};
+
 @interface DHAnimationEnums : NSObject
 
 @end

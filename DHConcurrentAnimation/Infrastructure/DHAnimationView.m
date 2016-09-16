@@ -8,7 +8,7 @@
 
 #import "DHAnimationView.h"
 
-@interface DHAnimationView ()
+@interface DHAnimationView ()<DHAnimationDelegate>
 
 @property (nonatomic, strong) NSMutableArray *animations;
 @property (nonatomic) NSInteger currentAnimationIndex;
@@ -42,20 +42,21 @@
 
 - (void) addAnimation:(DHAnimation *)animation
 {
+    animation.delegate = self;
     [self.animations addObject:animation];
 }
 
 - (void) playNextAnimation
 {
-    if (self.currentAnimationIndex == [self.animations count] - 1) {
+    if (self.currentAnimationIndex == [self.animations count]) {
         if ([self.delegate respondsToSelector:@selector(animationViewDidFinishPlayingAnimations:)]) {
             [self.delegate animationViewDidFinishPlayingAnimations:self];
         }
     } else {
-        self.currentAnimationIndex++;
         //TO-DO: Deal with multiple animation start simutaniously
         DHAnimation *nextAnimation = self.animations[self.currentAnimationIndex];
         [nextAnimation start];
+        self.currentAnimationIndex++;
     }
 }
 
@@ -71,4 +72,23 @@
         [self.delegate handleTapOnAnimationView:self];
     }
 }
+
+- (void) setupGL
+{
+    
+}
+
+- (void) draw
+{
+    for (DHAnimation *animation in self.animations) {
+        [animation draw];
+    }
+}
+
+#pragma mark - DHAnimationDelegate
+- (void) animationDidStop:(DHAnimation *)animation
+{
+    [self.animations removeObject:animation];
+}
+
 @end

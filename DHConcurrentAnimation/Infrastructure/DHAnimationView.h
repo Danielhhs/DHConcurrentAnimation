@@ -28,6 +28,8 @@
 
 @property (nonatomic, weak) id<DHAnimationViewDelegate> delegate;
 
+- (void) setupGL;
+- (void) draw;
 - (void) addAnimation:(DHAnimation *)animation;
 - (void) playNextAnimation;
 - (void) stopCurrentAnimation;

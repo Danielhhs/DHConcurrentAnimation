@@ -9,6 +9,7 @@
 #import <GLKit/GLKit.h>
 #import "NSBKeyframeAnimationFunctions.h"
 #import "DHAnimationEnums.h"
+#import "DHAnimationFactory.h"
 
 @interface DHAnimationSettings : NSObject
 
@@ -26,5 +27,11 @@
 @property (nonatomic) NSBKeyframeAnimationFunction timingFunction;
 @property (nonatomic) DHAnimationDirection direction;
 @property (nonatomic) DHAnimationEvent event;
+@property (nonatomic) DHAnimationTriggerEvent triggerEvent;
 
++ (DHAnimationSettings *) defaultSettingsForAnimationType:(DHObjectAnimationType)type
+                                                    event:(DHAnimationEvent)event
+                                             triggerEvent:(DHAnimationTriggerEvent)triggerEvent
+                                                forTarget:(UIView *)target
+                                            animationView:(GLKView *)animationView;
 @end

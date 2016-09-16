@@ -8,8 +8,9 @@
 
 #import "DHBuiltInAnimationTypeChooseTableViewController.h"
 #import "DHAnimationFactory.h"
+#import "DHObjectAnimationPresentationViewController.h"
 @interface DHBuiltInAnimationTypeChooseTableViewController ()
-
+@property (nonatomic) DHObjectAnimationType selectedAnimation;
 @end
 
 @implementation DHBuiltInAnimationTypeChooseTableViewController
@@ -43,6 +44,15 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BuitInAnimationsCell" forIndexPath:indexPath];
     cell.textLabel.text = [DHAnimationFactory builtInAnimations][indexPath.row];
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    self.selectedAnimation = [DHAnimationFactory animationTypeForName:cell.textLabel.text];
+    DHObjectAnimationPresentationViewController *presentationViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DHObjectAnimationPresentationViewController"];
+    presentationViewController.animations = [@[@(self.selectedAnimation)] mutableCopy];
+    [self.navigationController pushViewController:presentationViewController animated:YES];
 }
 
 @end

@@ -25,13 +25,13 @@
 //    
 //    [DHTextureLoader loadTextureWithView:imageView];
 //    [self.view addSubview:imageView];
-//    
+//
 //    [DHTextureLoader loadTextureWithImage:[UIImage imageNamed:@"2.jpg"]];
     
-    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"y it Out" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:32]}];
-    NSAttributedString *anotherAttrString = [[NSAttributedString alloc] initWithString:@"谢谢你" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:50]}];
-    [attrString appendAttributedString:anotherAttrString];
-    [DHTextureLoader loadTextureWithAttributedString:attrString];
+//    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:@"y it Out" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:32]}];
+//    NSAttributedString *anotherAttrString = [[NSAttributedString alloc] initWithString:@"谢谢你" attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:50]}];
+//    [attrString appendAttributedString:anotherAttrString];
+//    [DHTextureLoader loadTextureWithAttributedString:attrString];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

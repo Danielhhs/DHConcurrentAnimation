@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DHAnimationFactory.h"
+#import "DHAnimationEnums.h"
 
 @interface DHObjectAnimationPresentationViewController : UIViewController
 
-- (void) addAnimationOfType:;
+@property (nonatomic, strong) NSMutableArray *animations;
 
 @end

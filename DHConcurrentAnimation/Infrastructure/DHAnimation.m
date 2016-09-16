@@ -9,6 +9,7 @@
 #import "DHAnimation.h"
 #import "DHProgramLoader.h"
 #import "DHTextureLoader.h"
+#import "DHAnimationSettings.h"
 
 @interface DHAnimation ()
 @end
@@ -66,17 +67,13 @@
 - (void) start {
     self.elapsedTime = 0.f;
     self.percent = 0.f;
+    CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(update:)];
+    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void) stop
 {
-    //TO-DO: Force stop animation
-}
-
-- (void) updateWithTimeInterval:(NSTimeInterval)timeInterval
-{
-    self.elapsedTime += timeInterval;
-    self.percent = self.settings.timingFunction(self.elapsedTime * 1000.f, 0.f, 1.f, self.settings.duration * 1000.f);
+    [self.delegate animationDidStop:self];
 }
 
 - (void) draw
@@ -106,5 +103,26 @@
     glBindTexture(GL_TEXTURE_2D, texture);
     glUniform1i(samplerLoc, 0);
     [self.mesh drawEntireMesh];
+}
+
+- (void) update:(CADisplayLink *)displayLink
+{
+    self.elapsedTime += displayLink.duration;
+    self.percent = self.settings.timingFunction(self.elapsedTime * 1000.f, 0.f, 1.f, self.settings.duration * 1000.f);
+    [self updateWithTimeInterval:displayLink.duration];
+    if (self.elapsedTime - self.settings.startTime > self.settings.duration) {
+        self.percent = 1.f;
+        if (self.settings.completion) {
+            self.settings.completion(YES);
+        }
+        [self stop];
+        [self.delegate animationDidStop:self];
+        [displayLink invalidate];
+    }
+}
+
+- (void) updateWithTimeInterval:(NSTimeInterval)timeInterval
+{
+    
 }
 @end

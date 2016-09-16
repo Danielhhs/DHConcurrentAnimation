@@ -76,6 +76,7 @@
 
 - (void) generateIndicesData
 {
+    indices = malloc(sizeof(GLuint) * self.indexCount);
     int index = 0;
     for (int x = 0; x < self.columnCount; x++) {
         for (int y = 0; y < self.rowCount; y++) {

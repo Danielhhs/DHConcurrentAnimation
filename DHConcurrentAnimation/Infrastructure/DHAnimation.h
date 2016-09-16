@@ -7,8 +7,16 @@
 //
 
 #import <GLKit/GLKit.h>
-#import "DHAnimationSettings.h"
 #import "DHAnimationSceneMesh.h"
+
+@class DHAnimation;
+@protocol DHAnimationDelegate <NSObject>
+
+- (void) animationDidStop:(DHAnimation *)animation;
+
+@end
+
+@class DHAnimationSettings;
 
 @interface DHAnimation : NSObject {
     GLuint program;
@@ -25,20 +33,23 @@
 @property (nonatomic) GLKMatrix4 mvpMatrix;
 @property (nonatomic, strong) DHAnimationSceneMesh *mesh;
 
+@property (nonatomic, weak) id<DHAnimationDelegate> delegate;
+
 #pragma mark - Public APIs
 - (void) setupWithSettings:(DHAnimationSettings *)settings;
 - (void) start;
 - (void) stop;
 
-- (void) updateWithTimeInterval:(NSTimeInterval)timeInterval;
 - (void) draw;
 
 #pragma mark - For Overriding
 - (NSString *)vertexShaderName;
 - (NSString *)fragmentShaderName;
 - (void) drawFrame;
+- (void) setUpTargetGeometry;
 - (void) setupMeshes;
 - (void) setupTexture;
 - (void) setupUniforms;
+- (void) updateWithTimeInterval:(NSTimeInterval)timeInterval;
 
 @end

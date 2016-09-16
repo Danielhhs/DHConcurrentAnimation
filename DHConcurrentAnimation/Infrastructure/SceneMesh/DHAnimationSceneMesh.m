@@ -88,4 +88,18 @@
 {
     
 }
+
+- (void) printGeometryData
+{
+    for (int i = 0; i < self.vertexCount; i++) {
+        NSLog(@"position = (%g, %g, %g), texCoords = (%g, %g)", geometryAttribtues[i].position.x, geometryAttribtues[i].position.y, geometryAttribtues[i].position.z, geometryAttribtues[i].texCoords.s, geometryAttribtues[i].texCoords.t);
+    }
+}
+
+- (void) printIndices
+{
+    for (int i = 0; i < self.indexCount; i++) {
+        NSLog(@"%d", indices[i]);
+    }
+}
 @end

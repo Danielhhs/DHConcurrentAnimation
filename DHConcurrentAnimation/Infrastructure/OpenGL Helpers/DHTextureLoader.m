@@ -50,7 +50,6 @@
     GLfloat textureHeight = view.frame.size.height * screenScale;
     [DHTextureLoader drawOnTexture:texture textureWidth:(size_t)textureWidth textureHeight:(size_t)textureHeight drawBlock:^(CGContextRef context) {
         UIGraphicsPushContext(context);
-        CGContextSaveGState(context);
         if (flipVertical) {
             CGContextTranslateCTM(context, 0, textureHeight);
             CGContextScaleCTM(context, 1, -1);
@@ -68,8 +67,8 @@
             }
             CGContextRotateCTM(context, angle);
         }
-        [view drawViewHierarchyInRect:CGRectMake(0, 0, view.bounds.size.width * screenScale, view.bounds.size.height * screenScale) afterScreenUpdates:YES];
-        CGContextRestoreGState(context);
+        
+        [view drawViewHierarchyInRect:CGRectMake(0, 0, textureWidth, textureHeight) afterScreenUpdates:YES];
         UIGraphicsPopContext();
     }];
 }

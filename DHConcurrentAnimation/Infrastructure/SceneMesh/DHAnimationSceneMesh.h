@@ -99,4 +99,7 @@ typedef struct {
 //Call this method to generate
 - (void) generateIndicesData;
 
+#pragma mark - For debugging
+- (void) printGeometryData;
+- (void) printIndices;
 @end
