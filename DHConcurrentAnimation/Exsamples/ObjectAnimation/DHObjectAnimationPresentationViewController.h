@@ -13,5 +13,6 @@
 @interface DHObjectAnimationPresentationViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray *animations;
+@property (nonatomic) DHAnimationEvent event;
 
 @end

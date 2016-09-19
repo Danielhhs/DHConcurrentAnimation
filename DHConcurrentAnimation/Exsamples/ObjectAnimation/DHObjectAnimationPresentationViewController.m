@@ -29,7 +29,7 @@
     self.animationView = [[DHAnimationView alloc] initWithFrame:self.view.bounds context:self.context];
     self.animationView.delegate = self;
     for (NSNumber *type in self.animations) {
-        [self addAnimationOfType:[type intValue] event:DHAnimationEventBuiltIn];
+        [self addAnimationOfType:[type intValue] event:self.event];
     }
     [self.view addSubview:self.animationView];
     

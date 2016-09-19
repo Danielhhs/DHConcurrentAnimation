@@ -126,7 +126,7 @@
 
 - (GLKMatrix4) rotationMatrixForBuiltOutEvent
 {
-    GLfloat rotation = self.percent * self.initialSwingAmplitude;
+    GLfloat rotation = self.percent * self.initialSwingAmplitude * -1;
     
     GLKMatrix4 transformMatrix = GLKMatrix4MakeTranslation(-self.targetOrigin.x - self.targetSize.width / 2, -self.targetSize.height - self.targetOrigin.y, 0);
     GLKMatrix4 rotationMatrix = GLKMatrix4Rotate(GLKMatrix4Identity, rotation, 0, 0, 1);

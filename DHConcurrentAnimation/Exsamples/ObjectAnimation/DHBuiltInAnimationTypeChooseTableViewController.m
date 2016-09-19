@@ -52,6 +52,7 @@
     self.selectedAnimation = [DHAnimationFactory animationTypeForName:cell.textLabel.text];
     DHObjectAnimationPresentationViewController *presentationViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DHObjectAnimationPresentationViewController"];
     presentationViewController.animations = [@[@(self.selectedAnimation)] mutableCopy];
+    presentationViewController.event = DHAnimationEventBuiltIn;
     [self.navigationController pushViewController:presentationViewController animated:YES];
 }
 
