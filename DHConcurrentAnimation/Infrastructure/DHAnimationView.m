@@ -48,15 +48,17 @@
 
 - (void) playNextAnimation
 {
-    if (self.currentAnimationIndex == [self.animations count]) {
+    if (self.currentAnimationIndex >= [self.animations count]) {
         if ([self.delegate respondsToSelector:@selector(animationViewDidFinishPlayingAnimations:)]) {
             [self.delegate animationViewDidFinishPlayingAnimations:self];
         }
     } else {
         //TO-DO: Deal with multiple animation start simutaniously
         DHAnimation *nextAnimation = self.animations[self.currentAnimationIndex];
-        [nextAnimation start];
-        self.currentAnimationIndex++;
+        if ([nextAnimation readyToAnimate] == YES) {
+            [nextAnimation start];
+            self.currentAnimationIndex++;
+        }
     }
 }
 
@@ -91,4 +93,11 @@
     [self.animations removeObject:animation];
 }
 
+- (void) animationDidFinishSettingUp:(DHAnimation *)animation
+{
+    DHAnimation *nextAnimation = self.animations[self.currentAnimationIndex];
+    if ([animation isEqual:nextAnimation]) {
+        [self playNextAnimation];
+    }
+}
 @end

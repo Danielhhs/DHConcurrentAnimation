@@ -13,6 +13,7 @@
 @protocol DHAnimationDelegate <NSObject>
 
 - (void) animationDidStop:(DHAnimation *)animation;
+- (void) animationDidFinishSettingUp:(DHAnimation *)animation;
 
 @end
 
@@ -21,8 +22,9 @@
 @interface DHAnimation : NSObject {
     GLuint program;
     GLuint texture;
-    GLuint mvpLoc, samplerLoc, timeLoc, durationLoc, directionLoc, eventLoc;
+    GLuint mvpLoc, samplerLoc, timeLoc, durationLoc, directionLoc, eventLoc, percentLoc;
 }
+@property (nonatomic, readonly) BOOL readyToAnimate;
 @property (nonatomic, strong) EAGLContext *context;
 @property (nonatomic) NSTimeInterval elapsedTime;
 @property (nonatomic) CGFloat percent;

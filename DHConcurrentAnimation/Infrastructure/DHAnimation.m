@@ -12,6 +12,7 @@
 #import "DHAnimationSettings.h"
 
 @interface DHAnimation ()
+@property (nonatomic, readwrite) BOOL readyToAnimate;
 @end
 
 @implementation DHAnimation
@@ -24,6 +25,8 @@
     [self setupGL];
     [self setupMeshes];
     [self setupTexture];
+    self.readyToAnimate = YES;
+    [self.delegate animationDidFinishSettingUp:self];
 }
 
 - (void) setUpTargetGeometry
@@ -52,6 +55,7 @@
     timeLoc = glGetUniformLocation(program, "u_time");
     directionLoc = glGetUniformLocation(program, "u_direction");
     eventLoc = glGetUniformLocation(program, "u_event");
+    percentLoc = glGetUniformLocation(program, "u_percent");
 }
 
 - (void) setupMeshes
@@ -84,6 +88,7 @@
     glUniform1f(timeLoc, self.elapsedTime);
     glUniform1i(directionLoc, self.settings.direction);
     glUniform1i(eventLoc, self.settings.event);
+    glUniform1f(percentLoc, self.percent);
     [self drawFrame];
 }
 

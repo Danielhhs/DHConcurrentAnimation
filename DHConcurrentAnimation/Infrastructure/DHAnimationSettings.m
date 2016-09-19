@@ -22,7 +22,7 @@
     settings.targetView = target;
     settings.animationView = animationView;
     settings.triggerEvent = triggerEvent;
-    settings.direction = DHAnimationDirectionLeftToRight;
+    settings.direction = DHAnimationDirectionRightToLeft;
     [DHAnimationSettings updateColumnCountRowCountForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateTimingFunctionForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateDurationForSettings:settings forAnimationType:type];
@@ -48,20 +48,12 @@
 {
     if (settings.event == DHAnimationEventBuiltIn) {
         switch (type) {
-            case DHObjectAnimationTypeClothLine:
-                settings.timingFunction = NSBKeyframeAnimationFunctionEaseInCubic;
-                break;
-                
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;
                 break;
         }
     } else {
         switch (type) {
-            case DHObjectAnimationTypeClothLine:
-                settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutCubic;
-                break;
-                
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;
                 break;

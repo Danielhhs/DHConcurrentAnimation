@@ -222,7 +222,6 @@
     CGColorSpaceRelease(colorSpace);
     drawBlock(context);
     GLubyte *data = CGBitmapContextGetData(context);
-    UIImage *image = [UIImage imageWithCGImage:CGBitmapContextCreateImage(context)];
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)textureWidth, (GLsizei)textureHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
