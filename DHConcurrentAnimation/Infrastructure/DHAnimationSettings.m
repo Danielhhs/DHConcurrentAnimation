@@ -22,7 +22,7 @@
     settings.targetView = target;
     settings.animationView = animationView;
     settings.triggerEvent = triggerEvent;
-    settings.direction = DHAnimationDirectionRightToLeft;
+    settings.direction = DHAnimationDirectionLeftToRight;
     [DHAnimationSettings updateColumnCountRowCountForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateTimingFunctionForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateDurationForSettings:settings forAnimationType:type];
@@ -34,7 +34,11 @@
                              forAnimationType:(DHObjectAnimationType)type
 {
     switch (type) {
-            
+        case DHObjectAnimationTypeFold: {
+            settings.columnCount = 3;
+            settings.rowCount = 3;
+            break;
+        }
         default: {
             settings.columnCount = 1;
             settings.rowCount =1 ;
@@ -65,11 +69,8 @@
                   forAnimationType:(DHObjectAnimationType)type
 {
     switch (type) {
-        case DHObjectAnimationTypeClothLine:
-            settings.duration = 2.f;
-            break;
-            
         default:
+            settings.duration = 2.f;
             break;
     }
 }

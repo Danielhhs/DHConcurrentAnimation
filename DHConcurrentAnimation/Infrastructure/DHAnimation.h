@@ -8,6 +8,7 @@
 
 #import <GLKit/GLKit.h>
 #import "DHAnimationSceneMesh.h"
+#import "DHAnimationSettings.h"
 
 @class DHAnimation;
 @protocol DHAnimationDelegate <NSObject>
@@ -16,8 +17,6 @@
 - (void) animationDidFinishSettingUp:(DHAnimation *)animation;
 
 @end
-
-@class DHAnimationSettings;
 
 @interface DHAnimation : NSObject {
     GLuint program;

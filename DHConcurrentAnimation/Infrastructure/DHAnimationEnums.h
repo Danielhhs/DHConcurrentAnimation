@@ -26,6 +26,21 @@ typedef NS_ENUM(NSInteger, DHAnimationTriggerEvent) {
     DHAnimationTriggerEventStartSimutanously,
 };
 
+typedef NS_ENUM(NSInteger, DHTransitionType) {
+    DHTransitionTypeNone,
+};
+
+typedef NS_ENUM(NSInteger, DHObjectAnimationType) {
+    DHObjectAnimationTypeNone,
+    DHObjectAnimationTypeClothLine,
+    DHObjectAnimationTypeFold,
+};
+
+typedef NS_ENUM(NSInteger, DHTextAnimationType) {
+    DHTextAnimationTypeNone,
+};
+
+
 @interface DHAnimationEnums : NSObject
 
 @end

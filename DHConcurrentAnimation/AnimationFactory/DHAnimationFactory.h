@@ -10,19 +10,6 @@
 #import "DHAnimation.h"
 #import "DHAnimationEnums.h"
 
-typedef NS_ENUM(NSInteger, DHTransitionType) {
-    DHTransitionTypeNone,
-};
-
-typedef NS_ENUM(NSInteger, DHObjectAnimationType) {
-    DHObjectAnimationTypeNone,
-    DHObjectAnimationTypeClothLine,
-};
-
-typedef NS_ENUM(NSInteger, DHTextAnimationType) {
-    DHTextAnimationTypeNone,
-};
-
 @interface DHAnimationFactory : NSObject
 
 + (NSArray *) transitions;

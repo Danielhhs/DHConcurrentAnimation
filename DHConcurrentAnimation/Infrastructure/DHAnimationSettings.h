@@ -9,7 +9,6 @@
 #import <GLKit/GLKit.h>
 #import "NSBKeyframeAnimationFunctions.h"
 #import "DHAnimationEnums.h"
-#import "DHAnimationFactory.h"
 
 @interface DHAnimationSettings : NSObject
 

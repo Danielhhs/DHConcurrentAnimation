@@ -9,6 +9,7 @@
 #import "DHAnimationFactory.h"
 #import "DHAnimationSettings.h"
 #import "DHObjectClothLineAnimation.h"
+#import "DHObjectFoldAnimation.h"
 
 static NSArray *transitions;
 static NSArray *builtInAnimations;
@@ -22,6 +23,8 @@ static NSArray *textAnimations;
 {
     if ([animationName isEqualToString:@"ClothLine"]) {
         return DHObjectAnimationTypeClothLine;
+    } else if ([animationName isEqualToString:@"Fold"]) {
+        return DHObjectAnimationTypeFold;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -38,7 +41,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine"];
+        builtInAnimations = @[@"ClothLine", @"Fold"];
     }
     return builtInAnimations;
 }
@@ -46,7 +49,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine"];
+        builtOutAnimations = @[@"ClothLine", @"Fold"];
     }
     return builtOutAnimations;
 }
@@ -70,7 +73,13 @@ static NSArray *textAnimations;
             animation = [[DHObjectClothLineAnimation alloc] init];
             [animation setupWithSettings:settings];
             break;
-            
+        case DHObjectAnimationTypeFold: {
+            DHObjectFoldAnimation *fold = [[DHObjectFoldAnimation alloc] init];
+            fold.headerLength = 64;
+            animation = fold;
+            [animation setupWithSettings:settings];
+            break;
+        }
         default:
             break;
     }
