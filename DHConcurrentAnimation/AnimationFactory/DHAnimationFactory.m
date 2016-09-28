@@ -64,26 +64,31 @@ static NSArray *textAnimations;
 
 + (DHAnimation *) animationOfType:(DHObjectAnimationType)animationType event:(DHAnimationEvent)event forTarget:(UIView *)target animationView:(GLKView *)animationView
 {
+    return [DHAnimationFactory animationOfType:animationType event:event forTarget:target animationView:animationView settings:nil];
+}
+
++ (DHAnimation *) animationOfType:(DHObjectAnimationType)type event:(DHAnimationEvent)event forTarget:(UIView *)target animationView:(GLKView *)animationView settings:(DHAnimationSettings *)settings
+{
+    if (settings == nil) {
+        settings = [DHAnimationSettings defaultSettingsForAnimationType:type event:event triggerEvent:DHAnimationTriggerEventByTap forTarget:target animationView:animationView];
+    }
     DHAnimation *animation;
     
-    DHAnimationSettings *settings = [DHAnimationSettings defaultSettingsForAnimationType:animationType event:event triggerEvent:DHAnimationTriggerEventByTap forTarget:target animationView:animationView];
     
-    switch (animationType) {
+    switch (type) {
         case DHObjectAnimationTypeClothLine:
             animation = [[DHObjectClothLineAnimation alloc] init];
-            [animation setupWithSettings:settings];
             break;
         case DHObjectAnimationTypeFold: {
             DHObjectFoldAnimation *fold = [[DHObjectFoldAnimation alloc] init];
             fold.headerLength = 64;
             animation = fold;
-            [animation setupWithSettings:settings];
             break;
         }
         default:
             break;
     }
-    
+    animation.settings = settings;
     return animation;
 }
 @end

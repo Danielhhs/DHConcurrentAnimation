@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DHAnimation.h"
 #import "DHAnimationEnums.h"
+#import "DHAnimationSettings.h"
 
 @interface DHAnimationFactory : NSObject
 
@@ -22,6 +23,11 @@
                        forTarget:(UIView *)target
                    animationView:(GLKView *)animationView;
 
++ (DHAnimation *)animationOfType:(DHObjectAnimationType)type
+                           event:(DHAnimationEvent)event
+                       forTarget:(UIView *)target
+                   animationView:(GLKView *)animationView
+                        settings:(DHAnimationSettings *)settings;
 
 + (DHObjectAnimationType) animationTypeForName:(NSString *)animationName;
 @end

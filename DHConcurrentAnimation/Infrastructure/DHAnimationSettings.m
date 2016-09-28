@@ -11,6 +11,11 @@
 
 @implementation DHAnimationSettings
 
++ (DHAnimationSettings *) defaultSettingsForAnimationType:(DHObjectAnimationType)type event:(DHAnimationEvent)event
+{
+    return [DHAnimationSettings defaultSettingsForAnimationType:type event:event triggerEvent:DHAnimationTriggerEventByTap forTarget:nil animationView:nil];
+}
+
 + (DHAnimationSettings *) defaultSettingsForAnimationType:(DHObjectAnimationType)type
                                                     event:(DHAnimationEvent)event
                                              triggerEvent:(DHAnimationTriggerEvent)triggerEvent

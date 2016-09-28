@@ -9,11 +9,14 @@
 #import "DHObjectAnimationPresentationViewController.h"
 #import "DHAnimationView.h"
 @interface DHObjectAnimationPresentationViewController () <DHAnimationViewDelegate>
+
 @property (nonatomic, strong) DHAnimationView *animationView;
 
 @property (nonatomic, strong) EAGLContext *context;
 @property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic) NSTimeInterval elapsedTime;
+
+@property(nonatomic, strong) NSMutableArray *animationTargets;
 @end
 
 @implementation DHObjectAnimationPresentationViewController
@@ -28,8 +31,14 @@
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
     self.animationView = [[DHAnimationView alloc] initWithFrame:self.view.bounds context:self.context];
     self.animationView.delegate = self;
-    for (NSNumber *type in self.animations) {
-        [self addAnimationOfType:[type intValue] event:self.event];
+    for (DHAnimation *animation in self.animations) {
+        UIView *animationTarget = [self randomAnimationTarget];
+        [self.animationTargets addObject:animationTarget];
+        animation.settings.targetView = animationTarget;
+        animation.settings.animationView = self.animationView;
+        animation.mvpMatrix = self.animationView.mvpMatrix;
+        [animation setup];
+        [self.animationView addAnimation:animation];
     }
     [self.view addSubview:self.animationView];
     
@@ -79,6 +88,7 @@
 - (void) update:(CADisplayLink *)displayLink
 {
     self.elapsedTime += displayLink.duration;
+    [self.animationView updateWithTimeInterval:displayLink.duration];
     [self.animationView display];
 }
 
@@ -86,4 +96,13 @@
 {
     [animationView playNextAnimation];
 }
+
+- (NSMutableArray *) animationTargets
+{
+    if (!_animationTargets) {
+        _animationTargets = [NSMutableArray array];
+    }
+    return _animationTargets;
+}
+
 @end

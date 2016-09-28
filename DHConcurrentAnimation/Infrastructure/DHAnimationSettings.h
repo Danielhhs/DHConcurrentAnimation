@@ -29,6 +29,9 @@
 @property (nonatomic) DHAnimationTriggerEvent triggerEvent;
 
 + (DHAnimationSettings *) defaultSettingsForAnimationType:(DHObjectAnimationType)type
+                                                    event:(DHAnimationEvent)event;
+
++ (DHAnimationSettings *) defaultSettingsForAnimationType:(DHObjectAnimationType)type
                                                     event:(DHAnimationEvent)event
                                              triggerEvent:(DHAnimationTriggerEvent)triggerEvent
                                                 forTarget:(UIView *)target

@@ -10,8 +10,9 @@
 
 @interface DHAnimationView ()<DHAnimationDelegate>
 
-@property (nonatomic, strong) NSMutableArray *animations;
+@property (nonatomic, strong, readwrite) NSMutableArray *animations;
 @property (nonatomic) NSInteger currentAnimationIndex;
+@property (nonatomic, strong) NSMutableArray *playingAnimations;
 
 @end
 
@@ -57,6 +58,7 @@
         DHAnimation *nextAnimation = self.animations[self.currentAnimationIndex];
         if ([nextAnimation readyToAnimate] == YES) {
             [nextAnimation start];
+            [self.playingAnimations addObject:nextAnimation];
             self.currentAnimationIndex++;
         }
     }
@@ -82,8 +84,28 @@
 
 - (void) draw
 {
-    for (DHAnimation *animation in self.animations) {
+    for (DHAnimation *animation in self.playingAnimations) {
         [animation draw];
+    }
+}
+
+- (NSArray *) animationsArray
+{
+    return [self.animations copy];
+}
+
+- (NSMutableArray *) playingAnimations
+{
+    if (!_playingAnimations) {
+        _playingAnimations = [NSMutableArray array];
+    }
+    return _playingAnimations;
+}
+
+- (void) updateWithTimeInterval:(NSTimeInterval)interval
+{
+    for (DHAnimation *animation in self.animations) {
+        [animation updateWithTimeInterval:interval];
     }
 }
 
@@ -100,4 +122,6 @@
         [self playNextAnimation];
     }
 }
+
+
 @end

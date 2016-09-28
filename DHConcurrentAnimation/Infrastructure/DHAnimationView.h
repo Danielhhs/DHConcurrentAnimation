@@ -25,11 +25,13 @@
 @property (nonatomic) GLKMatrix4 projectionMatrix;
 @property (nonatomic) GLKMatrix4 modelViewMatrix;
 @property (nonatomic) GLKMatrix4 mvpMatrix;
+@property (nonatomic, readonly) NSArray *animationsArray;
 
 @property (nonatomic, weak) id<DHAnimationViewDelegate> delegate;
 
 - (void) setupGL;
 - (void) draw;
+- (void) updateWithTimeInterval:(NSTimeInterval)interval;
 - (void) addAnimation:(DHAnimation *)animation;
 - (void) playNextAnimation;
 - (void) stopCurrentAnimation;

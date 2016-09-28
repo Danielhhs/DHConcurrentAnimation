@@ -37,7 +37,7 @@
 @property (nonatomic, weak) id<DHAnimationDelegate> delegate;
 
 #pragma mark - Public APIs
-- (void) setupWithSettings:(DHAnimationSettings *)settings;
+- (void) setup;
 - (void) start;
 - (void) stop;
 

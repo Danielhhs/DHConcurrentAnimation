@@ -8,7 +8,7 @@
 
 #import "DHBuiltOutAnimationTypeChooseTableViewController.h"
 #import "DHAnimationFactory.h"
-#import "DHObjectAnimationPresentationViewController.h"
+#import "DHObjectAnimationSettingsTableViewController.h"
 @interface DHBuiltOutAnimationTypeChooseTableViewController ()
 @property (nonatomic) DHObjectAnimationType selectedAnimation;
 
@@ -39,14 +39,23 @@
     
 }
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    self.selectedAnimation = [DHAnimationFactory animationTypeForName:cell.textLabel.text];
-    DHObjectAnimationPresentationViewController *presentationViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DHObjectAnimationPresentationViewController"];
-    presentationViewController.animations = [@[@(self.selectedAnimation)] mutableCopy];
-    presentationViewController.event = DHAnimationEventBuiltOut;
-    [self.navigationController pushViewController:presentationViewController animated:YES];
-}
+//- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    self.selectedAnimation = [DHAnimationFactory animationTypeForName:cell.textLabel.text];
+//    DHObjectAnimationPresentationViewController *presentationViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DHObjectAnimationPresentationViewController"];
+//    presentationViewController.animations = [@[@(self.selectedAnimation)] mutableCopy];
+//    presentationViewController.event = DHAnimationEventBuiltOut;
+//    [self.navigationController pushViewController:presentationViewController animated:YES];
+//}
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"settingsSegue"]) {
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+        self.selectedAnimation = [DHAnimationFactory animationTypeForName:cell.textLabel.text];
+        DHObjectAnimationSettingsTableViewController *settingsController = (DHObjectAnimationSettingsTableViewController *)segue.destinationViewController;
+        settingsController.event = DHAnimationEventBuiltOut;
+    }
+}
 @end

@@ -17,9 +17,8 @@
 
 @implementation DHAnimation
 
-- (void) setupWithSettings:(DHAnimationSettings *)settings
+- (void) setup
 {
-    self.settings = settings;
     self.context = self.settings.animationView.context;
     [self setUpTargetGeometry];
     [self setupGL];
@@ -71,8 +70,6 @@
 - (void) start {
     self.elapsedTime = 0.f;
     self.percent = 0.f;
-    CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(update:)];
-    [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 
 - (void) stop
@@ -110,11 +107,11 @@
     [self.mesh drawEntireMesh];
 }
 
-- (void) update:(CADisplayLink *)displayLink
+- (void) updateWithTimeInterval:(NSTimeInterval)timeInterval
 {
-    self.elapsedTime += displayLink.duration;
+    self.elapsedTime += timeInterval;
     self.percent = self.settings.timingFunction(self.elapsedTime * 1000.f, 0.f, 1.f, self.settings.duration * 1000.f);
-    [self updateWithTimeInterval:displayLink.duration];
+    NSLog(@"%g", self.percent);
     if (self.elapsedTime - self.settings.startTime > self.settings.duration) {
         self.percent = 1.f;
         if (self.settings.completion) {
@@ -122,12 +119,6 @@
         }
         [self stop];
         [self.delegate animationDidStop:self];
-        [displayLink invalidate];
     }
-}
-
-- (void) updateWithTimeInterval:(NSTimeInterval)timeInterval
-{
-    
 }
 @end
