@@ -21,8 +21,8 @@ typedef NS_ENUM(NSInteger, DHAnimationEvent) {
 };
 
 typedef NS_ENUM(NSInteger, DHAnimationTriggerEvent) {
-    DHAnimationTriggerEventByTime,
     DHAnimationTriggerEventByTap,
+    DHAnimationTriggerEventByTime,
     DHAnimationTriggerEventStartSimutanously,
 };
 

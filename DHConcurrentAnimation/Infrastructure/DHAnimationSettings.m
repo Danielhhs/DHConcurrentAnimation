@@ -28,6 +28,7 @@
     settings.animationView = animationView;
     settings.triggerEvent = triggerEvent;
     settings.direction = DHAnimationDirectionLeftToRight;
+    settings.triggerTime = 2.f;
     [DHAnimationSettings updateColumnCountRowCountForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateTimingFunctionForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateDurationForSettings:settings forAnimationType:type];

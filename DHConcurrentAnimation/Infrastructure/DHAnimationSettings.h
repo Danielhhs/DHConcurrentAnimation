@@ -27,6 +27,7 @@
 @property (nonatomic) DHAnimationDirection direction;
 @property (nonatomic) DHAnimationEvent event;
 @property (nonatomic) DHAnimationTriggerEvent triggerEvent;
+@property (nonatomic) NSTimeInterval triggerTime;
 
 + (DHAnimationSettings *) defaultSettingsForAnimationType:(DHObjectAnimationType)type
                                                     event:(DHAnimationEvent)event;

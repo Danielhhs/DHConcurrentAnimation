@@ -12,6 +12,9 @@
 @property (weak, nonatomic) IBOutlet UISlider *durationSlider;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *directionSegment;
 @property (weak, nonatomic) IBOutlet UISlider *columnCountSlider;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *triggerEventSegment;
+@property (weak, nonatomic) IBOutlet UISlider *triggerTimeSlider;
+@property (weak, nonatomic) IBOutlet UITableViewCell *triggerTimeCell;
 @property (weak, nonatomic) IBOutlet UISlider *rowCountSlider;
 @end
 
@@ -40,6 +43,8 @@
     self.directionSegment.selectedSegmentIndex = self.settings.direction;
     self.columnCountSlider.value = self.settings.columnCount;
     self.rowCountSlider.value = self.settings.rowCount;
+    self.triggerTimeSlider.value = self.settings.triggerTime;
+    self.triggerTimeCell.hidden = !(self.settings.triggerEvent == DHAnimationTriggerEventByTime);
 }
 
 - (IBAction)durationSliderChanged:(UISlider *)sender {
@@ -57,5 +62,19 @@
 - (IBAction)rowCountSliderChanged:(UISlider *)sender {
     self.settings.rowCount = (NSInteger)floor(sender.value);
 }
+
+- (IBAction)triggerTimeSliderChanged:(UISlider *)sender {
+    self.settings.triggerTime = sender.value;
+}
+
+- (IBAction)triggerEventChanged:(UISegmentedControl *)sender {
+    self.settings.triggerEvent = sender.selectedSegmentIndex;
+    if (self.settings.triggerEvent == DHAnimationTriggerEventByTime) {
+        self.triggerTimeCell.hidden = NO;
+    } else {
+        self.triggerTimeCell.hidden = YES;
+    }
+}
+
 
 @end

@@ -80,7 +80,7 @@
                                         <rect key="frame" x="0.0" y="196" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4wJ-gN-LXe" id="xuX-Io-hZ8">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Animations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRW-1b-kfK">
@@ -253,6 +253,65 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Td9-CF-wRl">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Td9-CF-wRl" id="q23-FF-XXU">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trigger Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDd-Px-uBC">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jDv-GA-X99">
+                                                    <segments>
+                                                        <segment title="Tap"/>
+                                                        <segment title="Time"/>
+                                                        <segment title="Sync"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="triggerEventChanged:" destination="PfU-w5-J72" eventType="valueChanged" id="371-GN-djv"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="leadingMargin" secondItem="WDd-Px-uBC" secondAttribute="leading" id="0ma-dX-i0i"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jDv-GA-X99" secondAttribute="trailing" id="3pW-Hu-NO2"/>
+                                                <constraint firstItem="jDv-GA-X99" firstAttribute="leading" secondItem="WDd-Px-uBC" secondAttribute="trailing" constant="27" id="LsF-xr-u98"/>
+                                                <constraint firstItem="jDv-GA-X99" firstAttribute="centerY" secondItem="WDd-Px-uBC" secondAttribute="centerY" id="Q2a-uk-yvY"/>
+                                                <constraint firstItem="WDd-Px-uBC" firstAttribute="centerY" secondItem="q23-FF-XXU" secondAttribute="centerY" id="eKj-pc-MJK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="j9x-De-Krl">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j9x-De-Krl" id="ZIh-Jo-11B">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trigger Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqO-np-4xU">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="IaZ-8x-um9">
+                                                    <connections>
+                                                        <action selector="triggerTimeSliderChanged:" destination="PfU-w5-J72" eventType="valueChanged" id="6Vr-li-DZL"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fqO-np-4xU" firstAttribute="centerY" secondItem="ZIh-Jo-11B" secondAttribute="centerY" id="Gcj-rU-kMh"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="fqO-np-4xU" secondAttribute="leading" id="RpJ-pz-6WS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IaZ-8x-um9" secondAttribute="trailing" id="T2u-E9-DNs"/>
+                                                <constraint firstItem="IaZ-8x-um9" firstAttribute="leading" secondItem="fqO-np-4xU" secondAttribute="trailing" constant="33" id="cTA-hg-71x"/>
+                                                <constraint firstItem="IaZ-8x-um9" firstAttribute="centerY" secondItem="fqO-np-4xU" secondAttribute="centerY" id="qpb-xq-9Yx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -269,11 +328,14 @@
                         <outlet property="directionSegment" destination="hMy-Bl-dX1" id="BGr-jN-ZYx"/>
                         <outlet property="durationSlider" destination="8BQ-Ha-2Ch" id="xWd-El-8oq"/>
                         <outlet property="rowCountSlider" destination="lZt-Gq-jFe" id="pLS-eq-aiy"/>
+                        <outlet property="triggerEventSegment" destination="jDv-GA-X99" id="X6G-iV-wzv"/>
+                        <outlet property="triggerTimeCell" destination="j9x-De-Krl" id="WCz-WF-a2i"/>
+                        <outlet property="triggerTimeSlider" destination="IaZ-8x-um9" id="sJW-ay-pr6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f6C-iR-Wvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3905" y="680"/>
+            <point key="canvasLocation" x="3904.8000000000002" y="679.61019490254876"/>
         </scene>
         <!--Built In-->
         <scene sceneID="PR2-fE-oPc">
