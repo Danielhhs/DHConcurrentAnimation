@@ -59,16 +59,20 @@
             CGContextScaleCTM(context, -1, 1);
         }
         if (rotate) {
-            CGFloat angle = atan(-view.transform.c / view.transform.a);
-            if (angle > -M_PI && angle < 0) {
-                CGContextTranslateCTM(context, 0, fabs(view.bounds.size.width * screenScale * sin(angle)));
-            } else {
+            CGFloat angle = atan2(view.transform.b, view.transform.a);
+            if (angle >= 0 && angle < M_PI / 2) {
                 CGContextTranslateCTM(context, view.bounds.size.height * sin(angle) * screenScale, 0);
+            } else  if (angle >= M_PI / 2 && angle < M_PI) {
+                CGContextTranslateCTM(context, view.bounds.size.height * cos(angle - M_PI / 2) * screenScale + view.bounds.size.width * sin(angle - M_PI / 2) * screenScale, fabs(view.bounds.size.height * screenScale * sin(angle - M_PI / 2)));
+            } else if (angle > -M_PI / 2 && angle <= 0) {
+                CGContextTranslateCTM(context, 0, -view.bounds.size.width * screenScale * sin(angle));
+            } else {
+                CGContextTranslateCTM(context, view.bounds.size.width * screenScale * sin(fabs(angle) - M_PI / 2), view.bounds.size.width * screenScale * cos(fabs(angle) - M_PI / 2) + view.bounds.size.height * screenScale * sin(fabs(angle) - M_PI / 2));
             }
             CGContextRotateCTM(context, angle);
         }
         
-        [view drawViewHierarchyInRect:CGRectMake(0, 0, textureWidth, textureHeight) afterScreenUpdates:YES];
+        [view drawViewHierarchyInRect:CGRectMake(0, 0, view.bounds.size.width * screenScale, view.bounds.size.height * screenScale) afterScreenUpdates:YES];
         UIGraphicsPopContext();
     }];
 }
@@ -222,6 +226,7 @@
     CGColorSpaceRelease(colorSpace);
     drawBlock(context);
     GLubyte *data = CGBitmapContextGetData(context);
+    UIImage *image = [UIImage imageWithCGImage:CGBitmapContextCreateImage(context)];
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)textureWidth, (GLsizei)textureHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);

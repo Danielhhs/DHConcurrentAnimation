@@ -231,7 +231,6 @@ typedef struct {
     glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(DHFoldSceneMeshAttributes), NULL + offsetof(DHFoldSceneMeshAttributes, columnStartPosition));
     
     glBindVertexArray(0);
-    [self printVertices];
 }
 
 - (void) printVertices

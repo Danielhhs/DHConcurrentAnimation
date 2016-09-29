@@ -78,6 +78,8 @@
     CGPoint randomCenter = CGPointMake(randomRect.size.width / 2 + arc4random() % (int)(self.view.bounds.size.width - randomRect.size.width), randomRect.size.height / 2 + arc4random() % (int)(self.view.bounds.size.height - randomRect.size.height));
     target.center = randomCenter;
     target.contentMode = UIViewContentModeScaleToFill;
+    GLfloat angle = arc4random() % 100 / 100.f * M_PI * 2;
+    target.transform = CGAffineTransformMakeRotation(angle);
     return target;
 }
 
