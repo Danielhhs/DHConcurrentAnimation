@@ -62,6 +62,17 @@ static NSArray *textAnimations;
     return textAnimations;
 }
 
++ (DHAnimation *) animationOfName:(NSString *)animationName event:(DHAnimationEvent)event
+{
+    DHObjectAnimationType animationType = [DHAnimationFactory animationTypeForName:animationName];
+    return [DHAnimationFactory animationOfType:animationType event:event];
+}
+
++ (DHAnimation *) animationOfType:(DHObjectAnimationType)type event:(DHAnimationEvent)event
+{
+    return [DHAnimationFactory animationOfType:type event:event forTarget:nil animationView:nil];
+}
+
 + (DHAnimation *) animationOfType:(DHObjectAnimationType)animationType event:(DHAnimationEvent)event forTarget:(UIView *)target animationView:(GLKView *)animationView
 {
     return [DHAnimationFactory animationOfType:animationType event:event forTarget:target animationView:animationView settings:nil];

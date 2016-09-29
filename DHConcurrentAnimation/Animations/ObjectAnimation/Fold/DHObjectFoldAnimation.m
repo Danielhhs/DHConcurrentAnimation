@@ -79,4 +79,9 @@
         return (self.targetSize.height - self.headerLength) / self.settings.rowCount;
     }
 }
+
+- (NSString *) description
+{
+    return @"Fold";
+}
 @end

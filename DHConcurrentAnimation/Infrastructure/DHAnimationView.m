@@ -14,6 +14,7 @@
 @property (nonatomic) NSInteger currentAnimationIndex;
 @property (nonatomic, strong) NSMutableArray *playingAnimations;
 
+@property (nonatomic) BOOL waitingForNextAnimationToPlay;
 @end
 
 @implementation DHAnimationView
@@ -60,6 +61,8 @@
             [nextAnimation start];
             [self.playingAnimations addObject:nextAnimation];
             self.currentAnimationIndex++;
+        } else {
+            self.waitingForNextAnimationToPlay = YES;
         }
     }
 }
@@ -104,7 +107,7 @@
 
 - (void) updateWithTimeInterval:(NSTimeInterval)interval
 {
-    for (DHAnimation *animation in self.animations) {
+    for (DHAnimation *animation in self.playingAnimations) {
         [animation updateWithTimeInterval:interval];
     }
 }
@@ -112,14 +115,15 @@
 #pragma mark - DHAnimationDelegate
 - (void) animationDidStop:(DHAnimation *)animation
 {
-    [self.animations removeObject:animation];
+    [self.playingAnimations removeObject:animation];
 }
 
 - (void) animationDidFinishSettingUp:(DHAnimation *)animation
 {
     DHAnimation *nextAnimation = self.animations[self.currentAnimationIndex];
-    if ([animation isEqual:nextAnimation]) {
+    if ([animation isEqual:nextAnimation] && self.waitingForNextAnimationToPlay == YES) {
         [self playNextAnimation];
+        self.waitingForNextAnimationToPlay = NO;
     }
 }
 

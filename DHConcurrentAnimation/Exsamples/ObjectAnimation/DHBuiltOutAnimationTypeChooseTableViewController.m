@@ -55,7 +55,6 @@
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
         self.selectedAnimation = [DHAnimationFactory animationTypeForName:cell.textLabel.text];
         DHObjectAnimationSettingsTableViewController *settingsController = (DHObjectAnimationSettingsTableViewController *)segue.destinationViewController;
-        settingsController.event = DHAnimationEventBuiltOut;
     }
 }
 @end

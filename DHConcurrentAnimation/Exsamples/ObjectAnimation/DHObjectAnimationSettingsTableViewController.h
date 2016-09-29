@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DHAnimationEnums.h"
+#import "DHAnimationSettings.h"
 @interface DHObjectAnimationSettingsTableViewController : UITableViewController
-@property (nonatomic) DHObjectAnimationType type;
-@property (nonatomic) DHAnimationEvent event;
+@property (nonatomic, strong) DHAnimationSettings *settings;
 @end

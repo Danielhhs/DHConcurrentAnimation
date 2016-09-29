@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *directionSegment;
 @property (weak, nonatomic) IBOutlet UISlider *columnCountSlider;
 @property (weak, nonatomic) IBOutlet UISlider *rowCountSlider;
-@property (nonatomic, strong) DHAnimationSettings *settings;
 @end
 
 @implementation DHObjectAnimationSettingsTableViewController
@@ -21,7 +20,6 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    self.settings = [DHAnimationSettings defaultSettingsForAnimationType:self.type event:self.event];
 }
 
 - (void) viewWillAppear:(BOOL)animated

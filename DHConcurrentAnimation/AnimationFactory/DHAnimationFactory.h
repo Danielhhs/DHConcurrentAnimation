@@ -18,6 +18,12 @@
 + (NSArray *) builtOutAnimations;
 + (NSArray *) textAnimations;
 
++ (DHAnimation *) animationOfName:(NSString *)animationName
+                            event:(DHAnimationEvent)event;
+
++ (DHAnimation *) animationOfType:(DHObjectAnimationType)type
+                            event:(DHAnimationEvent)event;
+
 + (DHAnimation *)animationOfType:(DHObjectAnimationType)type
                            event:(DHAnimationEvent)event
                        forTarget:(UIView *)target

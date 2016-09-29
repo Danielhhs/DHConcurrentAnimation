@@ -32,6 +32,12 @@
     [DHAnimationSettings updateTimingFunctionForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateDurationForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateStartTimeForSettings:settings];
+    if (event == DHAnimationEventBuiltIn) {
+        __weak DHAnimationSettings *weakSettings = settings;
+        settings.completion = ^(BOOL finished){
+            [weakSettings.animationView addSubview:weakSettings.targetView];
+        };
+    }
     return settings;
 }
 

@@ -37,8 +37,8 @@
         animation.settings.targetView = animationTarget;
         animation.settings.animationView = self.animationView;
         animation.mvpMatrix = self.animationView.mvpMatrix;
-        [animation setup];
         [self.animationView addAnimation:animation];
+        [animation setup];
     }
     [self.view addSubview:self.animationView];
     
@@ -72,9 +72,11 @@
 
 - (UIImageView *) randomAnimationTarget
 {
-    UIImageView *target = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
+    CGRect randomRect = CGRectMake(0, 0, arc4random() % 50 + 100, arc4random() % 150 + 75);
+    UIImageView *target = [[UIImageView alloc] initWithFrame:randomRect];
     target.image = [self randomImage];
-    target.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    CGPoint randomCenter = CGPointMake(randomRect.size.width / 2 + arc4random() % (int)(self.view.bounds.size.width - randomRect.size.width), randomRect.size.height / 2 + arc4random() % (int)(self.view.bounds.size.height - randomRect.size.height));
+    target.center = randomCenter;
     target.contentMode = UIViewContentModeScaleToFill;
     return target;
 }

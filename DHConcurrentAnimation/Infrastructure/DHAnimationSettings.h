@@ -12,7 +12,7 @@
 
 @interface DHAnimationSettings : NSObject
 
-@property (nonatomic, weak) UIView *targetView;
+@property (nonatomic, strong) UIView *targetView;
 @property (nonatomic, weak) GLKView *animationView;
 
 @property (nonatomic, strong) void(^completion)(BOOL);

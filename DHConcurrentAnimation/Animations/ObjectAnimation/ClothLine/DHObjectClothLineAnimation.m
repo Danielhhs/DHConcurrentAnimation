@@ -134,4 +134,9 @@
     GLKMatrix4 theMatrix = GLKMatrix4Multiply(transformBackMatrix, GLKMatrix4Multiply(rotationMatrix, transformMatrix));
     return theMatrix;
 }
+
+- (NSString *) description
+{
+    return @"Cloth Line";
+}
 @end

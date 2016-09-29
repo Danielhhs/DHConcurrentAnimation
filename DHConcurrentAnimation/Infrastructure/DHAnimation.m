@@ -111,14 +111,12 @@
 {
     self.elapsedTime += timeInterval;
     self.percent = self.settings.timingFunction(self.elapsedTime * 1000.f, 0.f, 1.f, self.settings.duration * 1000.f);
-    NSLog(@"%g", self.percent);
     if (self.elapsedTime - self.settings.startTime > self.settings.duration) {
         self.percent = 1.f;
         if (self.settings.completion) {
             self.settings.completion(YES);
         }
         [self stop];
-        [self.delegate animationDidStop:self];
     }
 }
 @end

@@ -9,10 +9,13 @@
 #import "DHBuiltInAnimationTypeChooseTableViewController.h"
 #import "DHAnimationFactory.h"
 #import "DHObjectAnimationPresentationViewController.h"
+#import "DHAddedAnimationsTableViewController.h"
 @interface DHBuiltInAnimationTypeChooseTableViewController ()
 @property (nonatomic) DHObjectAnimationType selectedAnimation;
-@property (nonatomic) NSIndexPath *selectedIndexPath;
-@property (nonatomic) NSMutableArray *addedAnimations;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+@property (nonatomic, strong) NSMutableArray *addedAnimations;
+@property (nonatomic, strong) UINavigationController *addedAnimationNavigationViewController;
+@property (nonatomic, strong) DHAddedAnimationsTableViewController *addedAnimationsTableViewController;
 @end
 
 @implementation DHBuiltInAnimationTypeChooseTableViewController
@@ -57,4 +60,32 @@
     }
 }
 
+- (IBAction)showAddedAnimations:(id)sender {
+    self.addedAnimationsTableViewController.addedAnimations = self.addedAnimations;
+    [self presentViewController:self.addedAnimationNavigationViewController animated:YES completion:nil];
+}
+
+- (UINavigationController *) addedAnimationNavigationViewController
+{
+    if (!_addedAnimationNavigationViewController) {
+        _addedAnimationNavigationViewController = [[UINavigationController alloc] initWithRootViewController:self.addedAnimationsTableViewController];
+    }
+    return _addedAnimationNavigationViewController;
+}
+
+- (DHAddedAnimationsTableViewController *) addedAnimationsTableViewController
+{
+    if (!_addedAnimationsTableViewController) {
+        _addedAnimationsTableViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DHAddedAnimationsTableViewController"];
+        _addedAnimationsTableViewController.title = @"Added Animations";
+        _addedAnimationsTableViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(dismissAddedAnimationViewController)];
+        _addedAnimationsTableViewController.addedAnimations = self.addedAnimations;
+    }
+    return _addedAnimationsTableViewController;
+}
+
+- (void) dismissAddedAnimationViewController
+{
+    [self.addedAnimationNavigationViewController dismissViewControllerAnimated:YES completion:nil];
+}
 @end
