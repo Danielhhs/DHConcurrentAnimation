@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,7 +80,7 @@
                                         <rect key="frame" x="0.0" y="196" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4wJ-gN-LXe" id="xuX-Io-hZ8">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Animations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRW-1b-kfK">
@@ -274,7 +275,7 @@
             </objects>
             <point key="canvasLocation" x="3905" y="680"/>
         </scene>
-        <!--Built In Animations-->
+        <!--Built In-->
         <scene sceneID="PR2-fE-oPc">
             <objects>
                 <tableViewController id="ezE-MH-0w0" customClass="DHBuiltInAnimationTypeChooseTableViewController" sceneMemberID="viewController">
@@ -297,17 +298,19 @@
                             <outlet property="delegate" destination="ezE-MH-0w0" id="4We-lU-u76"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Built In Animations" id="ClQ-nV-ODe">
-                        <barButtonItem key="leftBarButtonItem" title="Animations" id="x4F-5Z-rud">
-                            <connections>
-                                <action selector="showAddedAnimations:" destination="ezE-MH-0w0" id="epp-QT-Ww1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="5Cj-Rm-i6V">
-                            <connections>
-                                <segue destination="GMp-p6-lbX" kind="show" identifier="PlayAnimation" id="ciH-T9-c8q"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Built In" id="ClQ-nV-ODe">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="5Cj-Rm-i6V">
+                                <connections>
+                                    <segue destination="GMp-p6-lbX" kind="show" identifier="PlayAnimation" id="ciH-T9-c8q"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Animations" id="x4F-5Z-rud">
+                                <connections>
+                                    <action selector="showAddedAnimations:" destination="ezE-MH-0w0" id="epp-QT-Ww1"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Xk-WA-IrF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,7 +335,7 @@
             </objects>
             <point key="canvasLocation" x="309" y="472"/>
         </scene>
-        <!--BuiltOut Animations-->
+        <!--BuiltOut-->
         <scene sceneID="NhH-NF-gHX">
             <objects>
                 <tableViewController id="syg-o0-LM6" customClass="DHBuiltOutAnimationTypeChooseTableViewController" sceneMemberID="viewController">
@@ -355,18 +358,24 @@
                             <outlet property="delegate" destination="syg-o0-LM6" id="zI9-1n-Sjm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="BuiltOut Animations" id="Yos-V0-O4p">
-                        <barButtonItem key="leftBarButtonItem" title="Animations" id="EKC-I6-5En"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="LaP-F7-Hvp">
-                            <connections>
-                                <segue destination="GMp-p6-lbX" kind="show" identifier="PlayAnimation" id="DUb-7E-Tw1"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="BuiltOut" id="Yos-V0-O4p">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="play" id="LaP-F7-Hvp">
+                                <connections>
+                                    <segue destination="GMp-p6-lbX" kind="show" identifier="PlayAnimation" id="DUb-7E-Tw1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Animations" id="EKC-I6-5En">
+                                <connections>
+                                    <action selector="showAddedAnimations:" destination="syg-o0-LM6" id="rLj-XD-T97"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cA5-53-n2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969" y="1180"/>
+            <point key="canvasLocation" x="1804" y="1178"/>
         </scene>
         <!--Added Animations Table View Controller-->
         <scene sceneID="ZN8-dh-Q1b">
@@ -381,7 +390,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cdK-aO-luj" id="yL5-le-Dsc">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
