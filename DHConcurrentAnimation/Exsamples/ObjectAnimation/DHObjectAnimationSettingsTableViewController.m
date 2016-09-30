@@ -43,6 +43,7 @@
     self.directionSegment.selectedSegmentIndex = self.settings.direction;
     self.columnCountSlider.value = self.settings.columnCount;
     self.rowCountSlider.value = self.settings.rowCount;
+    self.triggerEventSegment.selectedSegmentIndex = self.settings.triggerEvent;
     self.triggerTimeSlider.value = self.settings.triggerTime;
     self.triggerTimeCell.hidden = !(self.settings.triggerEvent == DHAnimationTriggerEventByTime);
 }
