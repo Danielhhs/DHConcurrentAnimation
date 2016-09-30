@@ -41,6 +41,7 @@
         [animation setup];
     }
     [self.view addSubview:self.animationView];
+    [self.animationView startAnimating];
     
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(update:)];
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];

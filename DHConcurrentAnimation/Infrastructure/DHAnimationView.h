@@ -29,7 +29,9 @@
 
 @property (nonatomic, weak) id<DHAnimationViewDelegate> delegate;
 
-- (void) setupGL;
+//Calling this method will start a timer if the first animation is triggered by time;
+//If the first animation is not triggered by time, then do nothing;
+- (void) startAnimating;
 - (void) draw;
 - (void) updateWithTimeInterval:(NSTimeInterval)interval;
 - (void) addAnimation:(DHAnimation *)animation;
