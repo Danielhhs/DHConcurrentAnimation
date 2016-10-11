@@ -31,15 +31,18 @@
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
     self.animationView = [[DHAnimationView alloc] initWithFrame:self.view.bounds context:self.context];
     self.animationView.delegate = self;
-    for (DHAnimation *animation in self.animations) {
-        UIView *animationTarget = [self randomAnimationTarget];
-        [self.animationTargets addObject:animationTarget];
-        animation.settings.targetView = animationTarget;
-        animation.settings.animationView = self.animationView;
-        animation.mvpMatrix = self.animationView.mvpMatrix;
-        [self.animationView addAnimation:animation];
-        [animation setup];
-    }
+    dispatch_queue_t animationSetUpQ = dispatch_queue_create("setUpAnimations", NULL);
+        for (DHAnimation *animation in self.animations) {
+            UIView *animationTarget = [self randomAnimationTarget];
+            [self.animationTargets addObject:animationTarget];
+            animation.settings.targetView = animationTarget;
+            animation.settings.animationView = self.animationView;
+            animation.mvpMatrix = self.animationView.mvpMatrix;
+            [self.animationView addAnimation:animation];
+            dispatch_async(animationSetUpQ, ^{
+                [animation setup];
+            });
+        }
     [self.view addSubview:self.animationView];
     [self.animationView startAnimating];
     

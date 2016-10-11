@@ -23,9 +23,11 @@
     [self setUpTargetGeometry];
     [self setupGL];
     [self setupMeshes];
-    [self setupTexture];
     self.readyToAnimate = YES;
-    [self.delegate animationDidFinishSettingUp:self];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setupTexture];
+        [self.delegate animationDidFinishSettingUp:self];
+    });
 }
 
 - (void) setUpTargetGeometry
