@@ -21,6 +21,10 @@
     glAttachShader(program, fragmentShader);
     
     glLinkProgram(program);
+    
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
+    
     GLint status;
     glGetProgramiv(program, GL_LINK_STATUS, &status);
     if (status != GL_TRUE) {

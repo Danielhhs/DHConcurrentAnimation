@@ -75,6 +75,7 @@
 - (void) stop
 {
     [self.delegate animationDidStop:self];
+    [self tearDown];
 }
 
 - (void) draw
@@ -118,5 +119,42 @@
         }
         [self stop];
     }
+}
+
+- (void) tearDown
+{
+    [EAGLContext setCurrentContext:self.context];
+    [self tearDownMeshes];
+    [self tearDownTextures];
+    [self tearDownPrograms];
+    [self tearDownExtraGLResource];
+    [EAGLContext setCurrentContext:nil];
+    self.context = nil;
+}
+
+- (void) tearDownMeshes
+{
+    [self.mesh tearDown];
+}
+
+- (void) tearDownTextures
+{
+    if (texture) {
+        glDeleteTextures(1, &texture);
+        texture = 0;
+    }
+}
+
+- (void) tearDownPrograms
+{
+    if (program) {
+        glDeleteProgram(program);
+        program = 0;
+    }
+}
+
+- (void) tearDownExtraGLResource
+{
+    
 }
 @end

@@ -69,6 +69,22 @@
     glBindVertexArray(0);
 }
 
+- (void) tearDown
+{
+    if (vertexArray) {
+        glDeleteVertexArrays(1, &vertexArray);
+        vertexArray = 0;
+    }
+    if (vertexBuffer) {
+        glDeleteBuffers(1, &vertexBuffer);
+        vertexBuffer = 0;
+    }
+    if (indexBuffer) {
+        glDeleteBuffers(1, &indexBuffer);
+        indexBuffer = 0;
+    }
+}
+
 - (void) generateGeometryAttributes
 {
     
