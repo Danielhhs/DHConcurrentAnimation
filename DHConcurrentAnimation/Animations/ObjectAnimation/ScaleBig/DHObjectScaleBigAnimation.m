@@ -7,7 +7,6 @@
 //
 
 #import "DHObjectScaleBigAnimation.h"
-#import "DHObjectScaleSceneMesh.h"
 @interface DHObjectScaleBigAnimation () {
     GLuint centerLoc;
 }
@@ -31,12 +30,6 @@
     [super setupUniforms];
     centerLoc = glGetUniformLocation(program, "u_center");
     self.center = CGPointMake(self.targetOrigin.x + self.targetSize.width / 2, self.targetOrigin.y + self.targetSize.height / 2);
-}
-
-- (void) setupMeshes
-{
-    self.mesh = [[DHObjectScaleSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:1 rowCount:1 columnMajored:YES rotate:YES];
-    [self.mesh generateMeshesData];
 }
 
 - (void) drawFrame

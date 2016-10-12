@@ -1,5 +1,5 @@
 //
-//  DHObjectScaleSceneMesh.h
+//  DHAnimationSimpleSceneMesh.h
 //  DHConcurrentAnimation
 //
 //  Created by Huang Hongsen on 16/10/12.
@@ -8,6 +8,6 @@
 
 #import "DHAnimationSplitSceneMesh.h"
 
-@interface DHObjectScaleSceneMesh : DHAnimationSplitSceneMesh
+@interface DHAnimationSimpleSceneMesh : DHAnimationSplitSceneMesh
 
 @end

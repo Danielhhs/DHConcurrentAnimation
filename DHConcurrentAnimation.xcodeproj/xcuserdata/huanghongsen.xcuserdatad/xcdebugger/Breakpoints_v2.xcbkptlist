@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/AnimationFactory/DHAnimationFactory.m"
-            timestampString = "497943002.965254"
+            timestampString = "497967801.467864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "+animationOfType:event:forTarget:animationView:settings:"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/Animations/ObjectAnimation/ScaleBig/DHObjectScaleBigAnimation.m"
-            timestampString = "497943608.546596"
+            timestampString = "497967801.467864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "-drawFrame"
             landmarkType = "7">
          </BreakpointContent>

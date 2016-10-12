@@ -10,6 +10,7 @@
 #import "DHProgramLoader.h"
 #import "DHTextureLoader.h"
 #import "DHAnimationSettings.h"
+#import "DHAnimationSimpleSceneMesh.h"
 
 @interface DHAnimation ()
 @property (nonatomic, readwrite) BOOL readyToAnimate;
@@ -61,7 +62,8 @@
 
 - (void) setupMeshes
 {
-    
+    self.mesh = [[DHAnimationSimpleSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:1 rowCount:1 columnMajored:YES rotate:NO];
+    [self.mesh generateMeshesData];
 }
 
 - (void) setupTexture
