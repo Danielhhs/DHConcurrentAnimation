@@ -11,6 +11,9 @@
 		541A859C1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A859B1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m */; };
 		541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */; };
 		541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A859E1DADCEFC001A9AE8 /* ObjectScaleVertex.glsl */; };
+		541A85F11DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A85F01DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m */; };
+		541A85F31DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A85F21DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl */; };
+		541A85F51DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */; };
 		545577F91D7FA4CD00D6DAC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577F81D7FA4CD00D6DAC1 /* main.m */; };
 		545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FB1D7FA4CD00D6DAC1 /* AppDelegate.m */; };
 		545577FF1D7FA4CD00D6DAC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FE1D7FA4CD00D6DAC1 /* ViewController.m */; };
@@ -82,6 +85,10 @@
 		541A859B1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DHObjectScaleSceneMesh.m; path = Scale/DHObjectScaleSceneMesh.m; sourceTree = "<group>"; };
 		541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ObjectScaleFragment.glsl; path = Scale/ObjectScaleFragment.glsl; sourceTree = "<group>"; };
 		541A859E1DADCEFC001A9AE8 /* ObjectScaleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ObjectScaleVertex.glsl; path = Scale/ObjectScaleVertex.glsl; sourceTree = "<group>"; };
+		541A85EF1DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectScaleBigAnimation.h; sourceTree = "<group>"; };
+		541A85F01DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectScaleBigAnimation.m; sourceTree = "<group>"; };
+		541A85F21DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectScaleBigVertex.glsl; sourceTree = "<group>"; };
+		541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectScaleBigFragment.glsl; sourceTree = "<group>"; };
 		545577F41D7FA4CD00D6DAC1 /* DHConcurrentAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHConcurrentAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545577F81D7FA4CD00D6DAC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545577FA1D7FA4CD00D6DAC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,6 +203,17 @@
 				541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */,
 			);
 			name = Scale;
+			sourceTree = "<group>";
+		};
+		541A85EE1DADFE80001A9AE8 /* ScaleBig */ = {
+			isa = PBXGroup;
+			children = (
+				541A85EF1DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.h */,
+				541A85F01DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m */,
+				541A85F21DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl */,
+				541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */,
+			);
+			path = ScaleBig;
 			sourceTree = "<group>";
 		};
 		545577EB1D7FA4CD00D6DAC1 = {
@@ -374,6 +392,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				541A85EE1DADFE80001A9AE8 /* ScaleBig */,
 				541A858F1DAD1A80001A9AE8 /* Scale */,
 				5460E70D1D8FD47F000CC5D1 /* Fold */,
 				54C373281D87ECEA0021E2F2 /* ClothLine */,
@@ -526,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541A85F31DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl in Resources */,
 				54C373321D87EDA80021E2F2 /* ObjectClothLineFragment.glsl in Resources */,
 				545578561D7FBE5000D6DAC1 /* 9.jpg in Resources */,
 				545578551D7FBE5000D6DAC1 /* 8.jpg in Resources */,
@@ -540,6 +560,7 @@
 				545578071D7FA4CD00D6DAC1 /* LaunchScreen.storyboard in Resources */,
 				541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */,
 				545578041D7FA4CD00D6DAC1 /* Assets.xcassets in Resources */,
+				541A85F51DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl in Resources */,
 				545578021D7FA4CD00D6DAC1 /* Main.storyboard in Resources */,
 				54C373301D87ED9D0021E2F2 /* ObjectClothLineVertex.glsl in Resources */,
 				545578501D7FBE5000D6DAC1 /* 3.jpg in Resources */,
@@ -574,6 +595,7 @@
 				5455782D1D7FA52B00D6DAC1 /* DHAnimation.m in Sources */,
 				545577FF1D7FA4CD00D6DAC1 /* ViewController.m in Sources */,
 				54C373391D87F6B50021E2F2 /* DHTextureLoader.m in Sources */,
+				541A85F11DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m in Sources */,
 				54C373411D87F9400021E2F2 /* DHAnimationFactory.m in Sources */,
 				541A85951DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m in Sources */,
 				5460E70C1D8FD170000CC5D1 /* DHBuiltOutAnimationTypeChooseTableViewController.m in Sources */,

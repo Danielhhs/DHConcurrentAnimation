@@ -65,6 +65,7 @@
     if (settings.event == DHAnimationEventBuiltIn) {
         switch (type) {
             case DHObjectAnimationTypeScale:
+            case DHObjectAnimationTYpeScaleBig:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutBack;
                 break;
             default:
@@ -73,6 +74,10 @@
         }
     } else {
         switch (type) {
+            case DHObjectAnimationTypeScale:
+            case DHObjectAnimationTYpeScaleBig:
+                settings.timingFunction = NSBKeyframeAnimationFunctionEaseInCubic;
+                break;
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;
                 break;

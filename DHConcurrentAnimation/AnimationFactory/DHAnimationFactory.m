@@ -11,6 +11,7 @@
 #import "DHObjectClothLineAnimation.h"
 #import "DHObjectFoldAnimation.h"
 #import "DHObjectScaleAnimation.h"
+#import "DHObjectScaleBigAnimation.h"
 
 static NSArray *transitions;
 static NSArray *builtInAnimations;
@@ -28,6 +29,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeFold;
     } else if ([animationName isEqualToString:@"Scale"]) {
         return DHObjectAnimationTypeScale;
+    } else if ([animationName isEqualToString:@"Scale Big"]) {
+        return DHObjectAnimationTYpeScaleBig;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -44,7 +47,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale"];
+        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big"];
     }
     return builtInAnimations;
 }
@@ -52,7 +55,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big"];
     }
     return builtOutAnimations;
 }
@@ -101,6 +104,10 @@ static NSArray *textAnimations;
         }
         case DHObjectAnimationTypeScale: {
             animation = [[DHObjectScaleAnimation alloc] init];
+            break;
+        }
+        case DHObjectAnimationTYpeScaleBig: {
+            animation = [[DHObjectScaleBigAnimation alloc] init];
             break;
         }
         default:
