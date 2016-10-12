@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541A85951DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A85941DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m */; };
+		541A859C1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A859B1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m */; };
+		541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */; };
+		541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A859E1DADCEFC001A9AE8 /* ObjectScaleVertex.glsl */; };
 		545577F91D7FA4CD00D6DAC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577F81D7FA4CD00D6DAC1 /* main.m */; };
 		545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FB1D7FA4CD00D6DAC1 /* AppDelegate.m */; };
 		545577FF1D7FA4CD00D6DAC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FE1D7FA4CD00D6DAC1 /* ViewController.m */; };
@@ -72,6 +76,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		541A85931DAD1AC7001A9AE8 /* DHObjectScaleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHObjectScaleAnimation.h; path = Scale/DHObjectScaleAnimation.h; sourceTree = "<group>"; };
+		541A85941DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DHObjectScaleAnimation.m; path = Scale/DHObjectScaleAnimation.m; sourceTree = "<group>"; };
+		541A859A1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHObjectScaleSceneMesh.h; path = Scale/DHObjectScaleSceneMesh.h; sourceTree = "<group>"; };
+		541A859B1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DHObjectScaleSceneMesh.m; path = Scale/DHObjectScaleSceneMesh.m; sourceTree = "<group>"; };
+		541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ObjectScaleFragment.glsl; path = Scale/ObjectScaleFragment.glsl; sourceTree = "<group>"; };
+		541A859E1DADCEFC001A9AE8 /* ObjectScaleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ObjectScaleVertex.glsl; path = Scale/ObjectScaleVertex.glsl; sourceTree = "<group>"; };
 		545577F41D7FA4CD00D6DAC1 /* DHConcurrentAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHConcurrentAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545577F81D7FA4CD00D6DAC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545577FA1D7FA4CD00D6DAC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +185,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		541A858F1DAD1A80001A9AE8 /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				541A85931DAD1AC7001A9AE8 /* DHObjectScaleAnimation.h */,
+				541A85941DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m */,
+				541A859A1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.h */,
+				541A859B1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m */,
+				541A859E1DADCEFC001A9AE8 /* ObjectScaleVertex.glsl */,
+				541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */,
+			);
+			name = Scale;
+			sourceTree = "<group>";
+		};
 		545577EB1D7FA4CD00D6DAC1 = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +374,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				541A858F1DAD1A80001A9AE8 /* Scale */,
 				5460E70D1D8FD47F000CC5D1 /* Fold */,
 				54C373281D87ECEA0021E2F2 /* ClothLine */,
 			);
@@ -510,9 +534,11 @@
 				5460E7171D8FDE4F000CC5D1 /* ObjectFoldFragment.glsl in Resources */,
 				5455784F1D7FBE5000D6DAC1 /* 2.jpg in Resources */,
 				5455784D1D7FBE5000D6DAC1 /* 0.jpg in Resources */,
+				541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */,
 				545578521D7FBE5000D6DAC1 /* 5.jpg in Resources */,
 				545578531D7FBE5000D6DAC1 /* 6.jpg in Resources */,
 				545578071D7FA4CD00D6DAC1 /* LaunchScreen.storyboard in Resources */,
+				541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */,
 				545578041D7FA4CD00D6DAC1 /* Assets.xcassets in Resources */,
 				545578021D7FA4CD00D6DAC1 /* Main.storyboard in Resources */,
 				54C373301D87ED9D0021E2F2 /* ObjectClothLineVertex.glsl in Resources */,
@@ -549,6 +575,7 @@
 				545577FF1D7FA4CD00D6DAC1 /* ViewController.m in Sources */,
 				54C373391D87F6B50021E2F2 /* DHTextureLoader.m in Sources */,
 				54C373411D87F9400021E2F2 /* DHAnimationFactory.m in Sources */,
+				541A85951DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m in Sources */,
 				5460E70C1D8FD170000CC5D1 /* DHBuiltOutAnimationTypeChooseTableViewController.m in Sources */,
 				5460E7101D8FD4AA000CC5D1 /* DHObjectFoldAnimation.m in Sources */,
 				54C373381D87F6B50021E2F2 /* DHProgramLoader.m in Sources */,
@@ -561,6 +588,7 @@
 				54C3731E1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m in Sources */,
 				545578341D7FA58500D6DAC1 /* DHAnimationSettings.m in Sources */,
 				54C3731B1D8645880021E2F2 /* DHAnimationSplitSceneMesh.m in Sources */,
+				541A859C1DADCEEC001A9AE8 /* DHObjectScaleSceneMesh.m in Sources */,
 				54A52FB41D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m in Sources */,
 				545577F91D7FA4CD00D6DAC1 /* main.m in Sources */,
 				5460E7091D8FD155000CC5D1 /* DHObjectAnimationPresentationViewController.m in Sources */,

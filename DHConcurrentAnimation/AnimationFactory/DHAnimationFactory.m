@@ -10,6 +10,7 @@
 #import "DHAnimationSettings.h"
 #import "DHObjectClothLineAnimation.h"
 #import "DHObjectFoldAnimation.h"
+#import "DHObjectScaleAnimation.h"
 
 static NSArray *transitions;
 static NSArray *builtInAnimations;
@@ -25,6 +26,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeClothLine;
     } else if ([animationName isEqualToString:@"Fold"]) {
         return DHObjectAnimationTypeFold;
+    } else if ([animationName isEqualToString:@"Scale"]) {
+        return DHObjectAnimationTypeScale;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -41,7 +44,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine", @"Fold"];
+        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale"];
     }
     return builtInAnimations;
 }
@@ -49,7 +52,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale"];
     }
     return builtOutAnimations;
 }
@@ -94,6 +97,10 @@ static NSArray *textAnimations;
             DHObjectFoldAnimation *fold = [[DHObjectFoldAnimation alloc] init];
             fold.headerLength = 64;
             animation = fold;
+            break;
+        }
+        case DHObjectAnimationTypeScale: {
+            animation = [[DHObjectScaleAnimation alloc] init];
             break;
         }
         default:

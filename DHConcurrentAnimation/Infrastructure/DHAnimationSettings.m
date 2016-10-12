@@ -64,6 +64,9 @@
 {
     if (settings.event == DHAnimationEventBuiltIn) {
         switch (type) {
+            case DHObjectAnimationTypeScale:
+                settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutBack;
+                break;
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;
                 break;
