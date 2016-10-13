@@ -88,8 +88,8 @@
     glUniformMatrix4fv(mvpLoc, 1, GL_FALSE, self.mvpMatrix.m);
     glUniform1f(durationLoc, self.settings.duration);
     glUniform1f(timeLoc, self.elapsedTime);
-    glUniform1i(directionLoc, self.settings.direction);
-    glUniform1i(eventLoc, self.settings.event);
+    glUniform1f(directionLoc, self.settings.direction);
+    glUniform1f(eventLoc, self.settings.event);
     glUniform1f(percentLoc, self.percent);
     [self drawFrame];
 }

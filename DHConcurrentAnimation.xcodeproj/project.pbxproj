@@ -49,6 +49,10 @@
 		5484BD1C1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD1B1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m */; };
 		5484BD1E1DAE6120003387D9 /* ObjectDropVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD1D1DAE6120003387D9 /* ObjectDropVertex.glsl */; };
 		5484BD201DAE612E003387D9 /* ObjectDropFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD1F1DAE612E003387D9 /* ObjectDropFragment.glsl */; };
+		5484BD241DAF1DD9003387D9 /* DHObjectBlindsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD231DAF1DD9003387D9 /* DHObjectBlindsAnimation.m */; };
+		5484BD271DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD261DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m */; };
+		5484BD291DAF1EDC003387D9 /* ObjectBlindsVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD281DAF1EDC003387D9 /* ObjectBlindsVertex.glsl */; };
+		5484BD2B1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD2A1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl */; };
 		549FCE061D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549FCE051D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m */; };
 		54A52FB41D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A52FB31D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m */; };
 		54C373181D86453F0021E2F2 /* DHAnimationSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C373171D86453F0021E2F2 /* DHAnimationSceneMesh.m */; };
@@ -145,6 +149,12 @@
 		5484BD1B1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationSimpleSceneMesh.m; sourceTree = "<group>"; };
 		5484BD1D1DAE6120003387D9 /* ObjectDropVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectDropVertex.glsl; sourceTree = "<group>"; };
 		5484BD1F1DAE612E003387D9 /* ObjectDropFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectDropFragment.glsl; sourceTree = "<group>"; };
+		5484BD221DAF1DD9003387D9 /* DHObjectBlindsAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectBlindsAnimation.h; sourceTree = "<group>"; };
+		5484BD231DAF1DD9003387D9 /* DHObjectBlindsAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectBlindsAnimation.m; sourceTree = "<group>"; };
+		5484BD251DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectBlindsSceneMesh.h; sourceTree = "<group>"; };
+		5484BD261DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectBlindsSceneMesh.m; sourceTree = "<group>"; };
+		5484BD281DAF1EDC003387D9 /* ObjectBlindsVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectBlindsVertex.glsl; sourceTree = "<group>"; };
+		5484BD2A1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectBlindsFragment.glsl; sourceTree = "<group>"; };
 		549FCE041D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAddedAnimationsTableViewController.h; sourceTree = "<group>"; };
 		549FCE051D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAddedAnimationsTableViewController.m; sourceTree = "<group>"; };
 		54A52FB21D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectAnimationSettingsTableViewController.h; sourceTree = "<group>"; };
@@ -368,6 +378,19 @@
 			path = Drop;
 			sourceTree = "<group>";
 		};
+		5484BD211DAF1DBE003387D9 /* Blinds */ = {
+			isa = PBXGroup;
+			children = (
+				5484BD221DAF1DD9003387D9 /* DHObjectBlindsAnimation.h */,
+				5484BD231DAF1DD9003387D9 /* DHObjectBlindsAnimation.m */,
+				5484BD251DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.h */,
+				5484BD261DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m */,
+				5484BD281DAF1EDC003387D9 /* ObjectBlindsVertex.glsl */,
+				5484BD2A1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl */,
+			);
+			path = Blinds;
+			sourceTree = "<group>";
+		};
 		54C373151D86453F0021E2F2 /* SceneMesh */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +433,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				5484BD211DAF1DBE003387D9 /* Blinds */,
 				5484BD161DAE5ECD003387D9 /* Drop */,
 				541A85EE1DADFE80001A9AE8 /* ScaleBig */,
 				541A858F1DAD1A80001A9AE8 /* Scale */,
@@ -580,6 +604,8 @@
 				541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */,
 				545578041D7FA4CD00D6DAC1 /* Assets.xcassets in Resources */,
 				541A85F51DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl in Resources */,
+				5484BD2B1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl in Resources */,
+				5484BD291DAF1EDC003387D9 /* ObjectBlindsVertex.glsl in Resources */,
 				545578021D7FA4CD00D6DAC1 /* Main.storyboard in Resources */,
 				5484BD201DAE612E003387D9 /* ObjectDropFragment.glsl in Resources */,
 				54C373301D87ED9D0021E2F2 /* ObjectClothLineVertex.glsl in Resources */,
@@ -624,12 +650,14 @@
 				5460E7101D8FD4AA000CC5D1 /* DHObjectFoldAnimation.m in Sources */,
 				54C373381D87F6B50021E2F2 /* DHProgramLoader.m in Sources */,
 				54C373471D88DFDD0021E2F2 /* DHAnimationView.m in Sources */,
+				5484BD271DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m in Sources */,
 				5455783A1D7FA6BB00D6DAC1 /* DHAnimationEnums.m in Sources */,
 				54C373181D86453F0021E2F2 /* DHAnimationSceneMesh.m in Sources */,
 				54C3732B1D87ECEA0021E2F2 /* DHObjectClothLineAnimation.m in Sources */,
 				5484BD191DAE5EDE003387D9 /* DHObjectDropAnimation.m in Sources */,
 				545578371D7FA65000D6DAC1 /* NSBKeyframeAnimationFunctions.c in Sources */,
 				545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */,
+				5484BD241DAF1DD9003387D9 /* DHObjectBlindsAnimation.m in Sources */,
 				54C3731E1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m in Sources */,
 				545578341D7FA58500D6DAC1 /* DHAnimationSettings.m in Sources */,
 				54C3731B1D8645880021E2F2 /* DHAnimationSplitSceneMesh.m in Sources */,

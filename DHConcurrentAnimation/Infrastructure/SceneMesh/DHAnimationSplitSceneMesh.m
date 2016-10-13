@@ -57,7 +57,7 @@
         CGFloat vy = uy * y;
         for (int x = 0; x < self.columnCount; x++) {
             CGFloat vx = ux * x;
-            index = y * self.columnCount + x;
+            index = (y * self.columnCount + x) * 4;
             geometryAttribtues[index + 0].position = GLKVector3Make(self.origin.x + vx * self.size.width, self.origin.y + vy * self.size.height, 0);
             geometryAttribtues[index + 0].texCoords = GLKVector2Make(vx, 1 - vy);
             

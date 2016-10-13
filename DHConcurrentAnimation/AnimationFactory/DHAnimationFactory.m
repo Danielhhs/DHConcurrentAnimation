@@ -13,6 +13,7 @@
 #import "DHObjectScaleAnimation.h"
 #import "DHObjectScaleBigAnimation.h"
 #import "DHObjectDropAnimation.h"
+#import "DHObjectBlindsAnimation.h"
 static NSArray *transitions;
 static NSArray *builtInAnimations;
 static NSArray *builtOutAnimations;
@@ -33,6 +34,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeScaleBig;
     } else if ([animationName isEqualToString:@"Drop"]) {
         return DHObjectAnimationTypeDrop;
+    } else if ([animationName isEqualToString:@"Blinds"]) {
+        return DHObjectAnimationTypeBlinds;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -49,7 +52,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop"];
+        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds"];
     }
     return builtInAnimations;
 }
@@ -57,7 +60,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds"];
     }
     return builtOutAnimations;
 }
@@ -114,6 +117,10 @@ static NSArray *textAnimations;
         }
         case DHObjectAnimationTypeDrop: {
             animation = [[DHObjectDropAnimation alloc] init];
+            break;
+        }
+        case DHObjectAnimationTypeBlinds: {
+            animation = [[DHObjectBlindsAnimation alloc] init];
             break;
         }
         default:

@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, DHObjectAnimationType) {
     DHObjectAnimationTypeScale,
     DHObjectAnimationTypeScaleBig,
     DHObjectAnimationTypeDrop,
+    DHObjectAnimationTypeBlinds,
 };
 
 typedef NS_ENUM(NSInteger, DHTextAnimationType) {

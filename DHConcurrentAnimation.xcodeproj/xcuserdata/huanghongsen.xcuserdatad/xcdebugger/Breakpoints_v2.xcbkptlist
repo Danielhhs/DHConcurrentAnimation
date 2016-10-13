@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/AnimationFactory/DHAnimationFactory.m"
-            timestampString = "497967801.467864"
+            timestampString = "498016508.920683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "+animationOfType:event:forTarget:animationView:settings:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,6 +42,22 @@
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "-drawFrame"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHConcurrentAnimation/Infrastructure/DHAnimation.m"
+            timestampString = "498045038.197484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-draw"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

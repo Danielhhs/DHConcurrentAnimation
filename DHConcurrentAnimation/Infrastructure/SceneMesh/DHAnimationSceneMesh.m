@@ -24,6 +24,7 @@
         _origin = origin;
         _columnCount = columnCount;
         _rowCount = rowCount;
+        _columnMajored = columnMajored;
     }
     return self;
 }

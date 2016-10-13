@@ -46,7 +46,8 @@
                              forAnimationType:(DHObjectAnimationType)type
 {
     switch (type) {
-        case DHObjectAnimationTypeFold: {
+        case DHObjectAnimationTypeFold:
+        case DHObjectAnimationTypeBlinds:{
             settings.columnCount = 3;
             settings.rowCount = 3;
             break;
@@ -71,6 +72,9 @@
             case DHObjectAnimationTypeDrop:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutBounce;
                 break;
+            case DHObjectAnimationTypeBlinds:
+                settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutBack;
+                break;
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;
                 break;
@@ -80,6 +84,9 @@
             case DHObjectAnimationTypeScale:
             case DHObjectAnimationTypeScaleBig:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseInCubic;
+                break;
+            case DHObjectAnimationTypeBlinds:
+                settings.timingFunction = NSBKeyframeAnimationFunctionEaseInBack;
                 break;
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;

@@ -40,7 +40,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BuitOutAnimationsCell" forIndexPath:indexPath];
-    cell.textLabel.text = [DHAnimationFactory builtInAnimations][indexPath.row];
+    cell.textLabel.text = [DHAnimationFactory builtOutAnimations][indexPath.row];
     return cell;
     
 }
