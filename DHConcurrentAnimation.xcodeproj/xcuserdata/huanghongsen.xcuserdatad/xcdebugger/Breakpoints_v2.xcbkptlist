@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/AnimationFactory/DHAnimationFactory.m"
-            timestampString = "498016508.920683"
+            timestampString = "498052023.765694"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "+animationOfType:event:forTarget:animationView:settings:"
             landmarkType = "7">
          </BreakpointContent>

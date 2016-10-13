@@ -14,6 +14,7 @@
 #import "DHObjectScaleBigAnimation.h"
 #import "DHObjectDropAnimation.h"
 #import "DHObjectBlindsAnimation.h"
+#import "DHObjectRotateAnimation.h"
 static NSArray *transitions;
 static NSArray *builtInAnimations;
 static NSArray *builtOutAnimations;
@@ -36,6 +37,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeDrop;
     } else if ([animationName isEqualToString:@"Blinds"]) {
         return DHObjectAnimationTypeBlinds;
+    } else if ([animationName isEqualToString:@"Rotate"]) {
+        return DHObjectAnimationTypeRotate;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -52,7 +55,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds"];
+        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds", @"Rotate"];
     }
     return builtInAnimations;
 }
@@ -60,7 +63,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate"];
     }
     return builtOutAnimations;
 }
@@ -121,6 +124,10 @@ static NSArray *textAnimations;
         }
         case DHObjectAnimationTypeBlinds: {
             animation = [[DHObjectBlindsAnimation alloc] init];
+            break;
+        }
+        case DHObjectAnimationTypeRotate: {
+            animation = [[DHObjectRotateAnimation alloc] init];
             break;
         }
         default:

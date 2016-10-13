@@ -67,6 +67,7 @@
         switch (type) {
             case DHObjectAnimationTypeScale:
             case DHObjectAnimationTypeScaleBig:
+            case DHObjectAnimationTypeRotate:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutBack;
                 break;
             case DHObjectAnimationTypeDrop:
@@ -83,6 +84,7 @@
         switch (type) {
             case DHObjectAnimationTypeScale:
             case DHObjectAnimationTypeScaleBig:
+            case DHObjectAnimationTypeRotate:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseInCubic;
                 break;
             case DHObjectAnimationTypeBlinds:

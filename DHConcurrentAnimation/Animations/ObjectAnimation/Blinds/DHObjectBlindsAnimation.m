@@ -7,7 +7,7 @@
 //
 
 #import "DHObjectBlindsAnimation.h"
-#import "DHObjectBlindsSceneMesh.h"
+#import "DHAnimationSimpleSceneMesh.h"
 @interface DHObjectBlindsAnimation() {
     GLuint columnWidthLoc, columnHeightLoc;
 }
@@ -47,7 +47,7 @@
     } else {
         rowCount = 1;
     }
-    self.mesh = [[DHObjectBlindsSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:columnCount rowCount:rowCount columnMajored:columnMajored rotate:NO];
+    self.mesh = [[DHAnimationSimpleSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:columnCount rowCount:rowCount columnMajored:columnMajored rotate:NO];
     [self.mesh generateMeshesData];
 }
 

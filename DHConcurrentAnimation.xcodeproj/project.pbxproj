@@ -13,6 +13,7 @@
 		541A85F11DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A85F01DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m */; };
 		541A85F31DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A85F21DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl */; };
 		541A85F51DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */; };
+		545169F51DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 545169F41DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m */; };
 		545577F91D7FA4CD00D6DAC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577F81D7FA4CD00D6DAC1 /* main.m */; };
 		545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FB1D7FA4CD00D6DAC1 /* AppDelegate.m */; };
 		545577FF1D7FA4CD00D6DAC1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FE1D7FA4CD00D6DAC1 /* ViewController.m */; };
@@ -46,13 +47,14 @@
 		5460E7151D8FDE44000CC5D1 /* ObjectFoldVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5460E7141D8FDE44000CC5D1 /* ObjectFoldVertex.glsl */; };
 		5460E7171D8FDE4F000CC5D1 /* ObjectFoldFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5460E7161D8FDE4F000CC5D1 /* ObjectFoldFragment.glsl */; };
 		5484BD191DAE5EDE003387D9 /* DHObjectDropAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD181DAE5EDE003387D9 /* DHObjectDropAnimation.m */; };
-		5484BD1C1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD1B1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m */; };
 		5484BD1E1DAE6120003387D9 /* ObjectDropVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD1D1DAE6120003387D9 /* ObjectDropVertex.glsl */; };
 		5484BD201DAE612E003387D9 /* ObjectDropFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD1F1DAE612E003387D9 /* ObjectDropFragment.glsl */; };
 		5484BD241DAF1DD9003387D9 /* DHObjectBlindsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD231DAF1DD9003387D9 /* DHObjectBlindsAnimation.m */; };
-		5484BD271DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD261DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m */; };
 		5484BD291DAF1EDC003387D9 /* ObjectBlindsVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD281DAF1EDC003387D9 /* ObjectBlindsVertex.glsl */; };
 		5484BD2B1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD2A1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl */; };
+		5484BD2F1DAFA62D003387D9 /* DHObjectRotateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5484BD2E1DAFA62D003387D9 /* DHObjectRotateAnimation.m */; };
+		5484BD311DAFA63E003387D9 /* ObjectRotateVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD301DAFA63E003387D9 /* ObjectRotateVertex.glsl */; };
+		5484BD331DAFA64C003387D9 /* ObjectRotateFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD321DAFA64C003387D9 /* ObjectRotateFragment.glsl */; };
 		549FCE061D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549FCE051D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m */; };
 		54A52FB41D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A52FB31D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m */; };
 		54C373181D86453F0021E2F2 /* DHAnimationSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C373171D86453F0021E2F2 /* DHAnimationSceneMesh.m */; };
@@ -94,6 +96,8 @@
 		541A85F01DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectScaleBigAnimation.m; sourceTree = "<group>"; };
 		541A85F21DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectScaleBigVertex.glsl; sourceTree = "<group>"; };
 		541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectScaleBigFragment.glsl; sourceTree = "<group>"; };
+		545169F31DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationSimpleSceneMesh.h; sourceTree = "<group>"; };
+		545169F41DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationSimpleSceneMesh.m; sourceTree = "<group>"; };
 		545577F41D7FA4CD00D6DAC1 /* DHConcurrentAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHConcurrentAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545577F81D7FA4CD00D6DAC1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		545577FA1D7FA4CD00D6DAC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,16 +149,16 @@
 		5460E7161D8FDE4F000CC5D1 /* ObjectFoldFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectFoldFragment.glsl; sourceTree = "<group>"; };
 		5484BD171DAE5EDE003387D9 /* DHObjectDropAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectDropAnimation.h; sourceTree = "<group>"; };
 		5484BD181DAE5EDE003387D9 /* DHObjectDropAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectDropAnimation.m; sourceTree = "<group>"; };
-		5484BD1A1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationSimpleSceneMesh.h; sourceTree = "<group>"; };
-		5484BD1B1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationSimpleSceneMesh.m; sourceTree = "<group>"; };
 		5484BD1D1DAE6120003387D9 /* ObjectDropVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectDropVertex.glsl; sourceTree = "<group>"; };
 		5484BD1F1DAE612E003387D9 /* ObjectDropFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectDropFragment.glsl; sourceTree = "<group>"; };
 		5484BD221DAF1DD9003387D9 /* DHObjectBlindsAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectBlindsAnimation.h; sourceTree = "<group>"; };
 		5484BD231DAF1DD9003387D9 /* DHObjectBlindsAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectBlindsAnimation.m; sourceTree = "<group>"; };
-		5484BD251DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectBlindsSceneMesh.h; sourceTree = "<group>"; };
-		5484BD261DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectBlindsSceneMesh.m; sourceTree = "<group>"; };
 		5484BD281DAF1EDC003387D9 /* ObjectBlindsVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectBlindsVertex.glsl; sourceTree = "<group>"; };
 		5484BD2A1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectBlindsFragment.glsl; sourceTree = "<group>"; };
+		5484BD2D1DAFA62D003387D9 /* DHObjectRotateAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectRotateAnimation.h; sourceTree = "<group>"; };
+		5484BD2E1DAFA62D003387D9 /* DHObjectRotateAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectRotateAnimation.m; sourceTree = "<group>"; };
+		5484BD301DAFA63E003387D9 /* ObjectRotateVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectRotateVertex.glsl; sourceTree = "<group>"; };
+		5484BD321DAFA64C003387D9 /* ObjectRotateFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectRotateFragment.glsl; sourceTree = "<group>"; };
 		549FCE041D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAddedAnimationsTableViewController.h; sourceTree = "<group>"; };
 		549FCE051D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAddedAnimationsTableViewController.m; sourceTree = "<group>"; };
 		54A52FB21D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectAnimationSettingsTableViewController.h; sourceTree = "<group>"; };
@@ -383,25 +387,34 @@
 			children = (
 				5484BD221DAF1DD9003387D9 /* DHObjectBlindsAnimation.h */,
 				5484BD231DAF1DD9003387D9 /* DHObjectBlindsAnimation.m */,
-				5484BD251DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.h */,
-				5484BD261DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m */,
 				5484BD281DAF1EDC003387D9 /* ObjectBlindsVertex.glsl */,
 				5484BD2A1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl */,
 			);
 			path = Blinds;
 			sourceTree = "<group>";
 		};
+		5484BD2C1DAFA60B003387D9 /* Rotate */ = {
+			isa = PBXGroup;
+			children = (
+				5484BD2D1DAFA62D003387D9 /* DHObjectRotateAnimation.h */,
+				5484BD2E1DAFA62D003387D9 /* DHObjectRotateAnimation.m */,
+				5484BD301DAFA63E003387D9 /* ObjectRotateVertex.glsl */,
+				5484BD321DAFA64C003387D9 /* ObjectRotateFragment.glsl */,
+			);
+			path = Rotate;
+			sourceTree = "<group>";
+		};
 		54C373151D86453F0021E2F2 /* SceneMesh */ = {
 			isa = PBXGroup;
 			children = (
+				545169F31DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.h */,
+				545169F41DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m */,
 				54C373161D86453F0021E2F2 /* DHAnimationSceneMesh.h */,
 				54C373171D86453F0021E2F2 /* DHAnimationSceneMesh.m */,
 				54C373191D8645880021E2F2 /* DHAnimationSplitSceneMesh.h */,
 				54C3731A1D8645880021E2F2 /* DHAnimationSplitSceneMesh.m */,
 				54C3731C1D8645990021E2F2 /* DHAnimationContinousSceneMesh.h */,
 				54C3731D1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m */,
-				5484BD1A1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.h */,
-				5484BD1B1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m */,
 			);
 			path = SceneMesh;
 			sourceTree = "<group>";
@@ -433,6 +446,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				5484BD2C1DAFA60B003387D9 /* Rotate */,
 				5484BD211DAF1DBE003387D9 /* Blinds */,
 				5484BD161DAE5ECD003387D9 /* Drop */,
 				541A85EE1DADFE80001A9AE8 /* ScaleBig */,
@@ -607,6 +621,8 @@
 				5484BD2B1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl in Resources */,
 				5484BD291DAF1EDC003387D9 /* ObjectBlindsVertex.glsl in Resources */,
 				545578021D7FA4CD00D6DAC1 /* Main.storyboard in Resources */,
+				5484BD311DAFA63E003387D9 /* ObjectRotateVertex.glsl in Resources */,
+				5484BD331DAFA64C003387D9 /* ObjectRotateFragment.glsl in Resources */,
 				5484BD201DAE612E003387D9 /* ObjectDropFragment.glsl in Resources */,
 				54C373301D87ED9D0021E2F2 /* ObjectClothLineVertex.glsl in Resources */,
 				545578501D7FBE5000D6DAC1 /* 3.jpg in Resources */,
@@ -641,22 +657,22 @@
 				5460E7081D8FD155000CC5D1 /* DHBuiltInAnimationTypeChooseTableViewController.m in Sources */,
 				5455782D1D7FA52B00D6DAC1 /* DHAnimation.m in Sources */,
 				545577FF1D7FA4CD00D6DAC1 /* ViewController.m in Sources */,
-				5484BD1C1DAE6048003387D9 /* DHAnimationSimpleSceneMesh.m in Sources */,
 				54C373391D87F6B50021E2F2 /* DHTextureLoader.m in Sources */,
 				541A85F11DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m in Sources */,
 				54C373411D87F9400021E2F2 /* DHAnimationFactory.m in Sources */,
+				5484BD2F1DAFA62D003387D9 /* DHObjectRotateAnimation.m in Sources */,
 				541A85951DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m in Sources */,
 				5460E70C1D8FD170000CC5D1 /* DHBuiltOutAnimationTypeChooseTableViewController.m in Sources */,
 				5460E7101D8FD4AA000CC5D1 /* DHObjectFoldAnimation.m in Sources */,
 				54C373381D87F6B50021E2F2 /* DHProgramLoader.m in Sources */,
 				54C373471D88DFDD0021E2F2 /* DHAnimationView.m in Sources */,
-				5484BD271DAF1EA2003387D9 /* DHObjectBlindsSceneMesh.m in Sources */,
 				5455783A1D7FA6BB00D6DAC1 /* DHAnimationEnums.m in Sources */,
 				54C373181D86453F0021E2F2 /* DHAnimationSceneMesh.m in Sources */,
 				54C3732B1D87ECEA0021E2F2 /* DHObjectClothLineAnimation.m in Sources */,
 				5484BD191DAE5EDE003387D9 /* DHObjectDropAnimation.m in Sources */,
 				545578371D7FA65000D6DAC1 /* NSBKeyframeAnimationFunctions.c in Sources */,
 				545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */,
+				545169F51DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m in Sources */,
 				5484BD241DAF1DD9003387D9 /* DHObjectBlindsAnimation.m in Sources */,
 				54C3731E1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m in Sources */,
 				545578341D7FA58500D6DAC1 /* DHAnimationSettings.m in Sources */,
