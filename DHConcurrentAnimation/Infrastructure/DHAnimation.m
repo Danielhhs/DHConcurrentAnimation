@@ -14,6 +14,7 @@
 
 @interface DHAnimation ()
 @property (nonatomic, readwrite) BOOL readyToAnimate;
+@property (nonatomic) BOOL displayed;
 @end
 
 @implementation DHAnimation
@@ -92,6 +93,12 @@
     glUniform1f(eventLoc, self.settings.event);
     glUniform1f(percentLoc, self.percent);
     [self drawFrame];
+    if (self.displayed == NO) {
+        if (self.settings.event == DHAnimationEventBuiltOut) {
+            [self.settings.targetView removeFromSuperview];
+        }
+        self.displayed = YES;
+    }
 }
 
 - (NSString *) vertexShaderName

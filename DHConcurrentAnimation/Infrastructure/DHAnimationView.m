@@ -54,6 +54,9 @@
 {
     animation.delegate = self;
     [self.animations addObject:animation];
+    if (animation.settings.event == DHAnimationEventBuiltOut) {
+        [self addSubview:animation.settings.targetView];
+    }
 }
 
 - (void) playNextAnimation

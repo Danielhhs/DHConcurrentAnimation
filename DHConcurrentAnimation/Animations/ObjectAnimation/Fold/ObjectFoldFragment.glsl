@@ -13,6 +13,11 @@ const vec3 c_light = vec3(0.5, 0.5, 1.f);
 
 void main() {
     out_color = texture(s_tex, v_texCoords);
-    float ndotl = dot(normalize(v_normal), normalize(c_light));
-    out_color.a = ndotl * 0.618 + 0.382;
+    
+    if (out_color.a < 0.05) {
+        discard;
+    } else {
+        float ndotl = dot(normalize(v_normal), normalize(c_light));
+        out_color.a = ndotl * 0.618 + 0.382;
+    }
 }
