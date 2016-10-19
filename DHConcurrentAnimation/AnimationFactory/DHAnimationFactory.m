@@ -15,6 +15,7 @@
 #import "DHObjectDropAnimation.h"
 #import "DHObjectBlindsAnimation.h"
 #import "DHObjectRotateAnimation.h"
+#import "DHObjectConfettiAnimation.h"
 static NSArray *transitions;
 static NSArray *builtInAnimations;
 static NSArray *builtOutAnimations;
@@ -39,6 +40,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeBlinds;
     } else if ([animationName isEqualToString:@"Rotate"]) {
         return DHObjectAnimationTypeRotate;
+    } else if ([animationName isEqualToString:@"Confetti"]) {
+        return DHObjectAnimationTypeConfetti;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -55,7 +58,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds", @"Rotate"];
+        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds", @"Rotate", @"Confetti"];
     }
     return builtInAnimations;
 }
@@ -63,7 +66,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti"];
     }
     return builtOutAnimations;
 }
@@ -128,6 +131,10 @@ static NSArray *textAnimations;
         }
         case DHObjectAnimationTypeRotate: {
             animation = [[DHObjectRotateAnimation alloc] init];
+            break;
+        }
+        case DHObjectAnimationTypeConfetti: {
+            animation = [[DHObjectConfettiAnimation alloc] init];
             break;
         }
         default:

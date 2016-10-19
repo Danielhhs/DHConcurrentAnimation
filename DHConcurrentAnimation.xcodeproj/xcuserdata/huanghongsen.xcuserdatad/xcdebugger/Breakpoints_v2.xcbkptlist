@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/AnimationFactory/DHAnimationFactory.m"
-            timestampString = "498052023.765694"
+            timestampString = "498398198.051509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "+animationOfType:event:forTarget:animationView:settings:"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/Animations/ObjectAnimation/ScaleBig/DHObjectScaleBigAnimation.m"
-            timestampString = "497967801.467864"
+            timestampString = "498396609.148745"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-drawFrame"
             landmarkType = "7">
          </BreakpointContent>
@@ -51,13 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DHConcurrentAnimation/Infrastructure/DHAnimation.m"
-            timestampString = "498054397.557689"
+            filePath = "DHConcurrentAnimation/Infrastructure/SceneMesh/DHAnimationSplitSceneMesh.m"
+            timestampString = "498464473.452282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "-draw"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-generateColumnMajoredGeometryAttributes"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

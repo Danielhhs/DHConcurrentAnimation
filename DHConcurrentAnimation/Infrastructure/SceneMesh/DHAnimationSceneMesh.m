@@ -11,20 +11,35 @@
 
 @implementation DHAnimationSceneMesh
 
-- (instancetype) initWithTargetSize:(CGSize)size
-                             origin:(CGPoint)origin
-                        columnCount:(NSInteger)columnCount
-                           rowCount:(NSInteger)rowCount
-                      columnMajored:(BOOL)columnMajored
-                             rotate:(BOOL)rotate
+- (instancetype) initWithTarget:(UIView *)target
+                           size:(CGSize)size
+                         origin:(CGPoint)origin
+                    columnCount:(NSInteger)columnCount
+                       rowCount:(NSInteger)rowCount
+                  columnMajored:(BOOL)columnMajored
+                         rotate:(BOOL)rotate
+{
+    return [self initWithTarget:target size:size origin:origin columnCount:columnCount rowCount:rowCount columnMajored:columnMajored rotate:rotate rotation:0];
+}
+- (instancetype) initWithTarget:(UIView *)target
+                           size:(CGSize)size
+                         origin:(CGPoint)origin
+                    columnCount:(NSInteger)columnCount
+                       rowCount:(NSInteger)rowCount
+                  columnMajored:(BOOL)columnMajored
+                         rotate:(BOOL)rotate
+                           rotation:(CGFloat)rotation
 {
     self = [super init];
     if (self) {
+        _target = target;
         _size = size;
         _origin = origin;
         _columnCount = columnCount;
         _rowCount = rowCount;
         _columnMajored = columnMajored;
+        _rotation = rotation;
+        _rotate = rotate;
     }
     return self;
 }
@@ -118,5 +133,23 @@
     for (int i = 0; i < self.indexCount; i++) {
         NSLog(@"%d", indices[i]);
     }
+}
+
+- (void) printVertices
+{
+}
+
+- (GLKVector3) rotatePositionForPosition:(GLKVector3)position
+{
+    GLfloat rotation = atan(self.target.transform.c / self.target.transform.a);
+    GLKMatrix4 transformMatrix = GLKMatrix4MakeTranslation(-(self.origin.x + self.target.bounds.size.width / 2), -(self.origin.y + self.target.bounds.size.height / 2), 0);
+    GLKMatrix4 rotationMatrix = GLKMatrix4MakeRotation(rotation, 0, 0, 1);
+    transformMatrix = GLKMatrix4Multiply(rotationMatrix, transformMatrix);
+    GLKMatrix4 translateBackMatrix = GLKMatrix4MakeTranslation(self.origin.x + self.target.frame.size.width / 2, self.origin.y + self.target.frame.size.height / 2, 0);
+    transformMatrix = GLKMatrix4Multiply(translateBackMatrix, transformMatrix);
+    NSLog(@"transformMatrix = %@", NSStringFromGLKMatrix4(transformMatrix));
+    GLKVector4 rotatedPos = GLKVector4Make(position.x, position.y, position.z, 1);
+    rotatedPos = GLKMatrix4MultiplyVector4(transformMatrix, rotatedPos);
+    return GLKVector3Make(rotatedPos.x, rotatedPos.y, rotatedPos.z );
 }
 @end

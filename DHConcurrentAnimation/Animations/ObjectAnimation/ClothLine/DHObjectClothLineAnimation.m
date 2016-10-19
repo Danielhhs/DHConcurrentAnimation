@@ -37,9 +37,8 @@
     return @"ObjectClothLineFragment.glsl";
 }
 
-- (void) setupUniforms
+- (void) setupExtraUniforms
 {
-    [super setupUniforms];
     offsetLoc = glGetUniformLocation(program, "u_offset");
     rotationMatrixLoc = glGetUniformLocation(program, "u_rotationMatrix");
     transitionRatioLoc = glGetUniformLocation(program, "u_transitionRatio");
@@ -64,7 +63,7 @@
 
 - (void) setupMeshes
 {
-    self.mesh = [[DHObjectClothLineSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:1 rowCount:1 columnMajored:YES rotate:YES];
+    self.mesh = [[DHObjectClothLineSceneMesh alloc] initWithTarget:self.settings.targetView size:self.targetSize origin:self.targetOrigin columnCount:1 rowCount:1 columnMajored:YES rotate:NO];
     [self.mesh generateMeshesData];
 }
 

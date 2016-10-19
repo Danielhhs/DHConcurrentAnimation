@@ -26,9 +26,8 @@
     return @"ObjectScaleFragment.glsl";
 }
 
-- (void) setupUniforms
+- (void) setupExtraUniforms
 {
-    [super setupUniforms];
     centerLoc = glGetUniformLocation(program, "u_center");
     self.center = CGPointMake(self.targetOrigin.x + self.targetSize.width / 2, self.targetOrigin.y + self.targetSize.height / 2);
 }

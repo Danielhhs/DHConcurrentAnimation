@@ -29,6 +29,7 @@
     settings.triggerEvent = triggerEvent;
     settings.direction = DHAnimationDirectionLeftToRight;
     settings.triggerTime = 2.f;
+    [DHAnimationSettings updateRotateTextureForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateColumnCountRowCountForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateTimingFunctionForSettings:settings forAnimationType:type];
     [DHAnimationSettings updateDurationForSettings:settings forAnimationType:type];
@@ -50,6 +51,11 @@
         case DHObjectAnimationTypeBlinds:{
             settings.columnCount = 3;
             settings.rowCount = 3;
+            break;
+        }
+        case DHObjectAnimationTypeConfetti: {
+            settings.columnCount = 25;
+            settings.rowCount = 25;
             break;
         }
         default: {
@@ -117,6 +123,19 @@
         case DHAnimationTriggerEventByTime:
             settings.startTime = 2.f;
         default:
+            break;
+    }
+}
+
++ (void) updateRotateTextureForSettings:(DHAnimationSettings *)settings forAnimationType:(DHObjectAnimationType) animationType
+{
+    switch (animationType) {
+        case DHObjectAnimationTypeConfetti:
+            settings.rotateTexture = NO;
+            break;
+            
+        default:
+            settings.rotateTexture = YES;
             break;
     }
 }

@@ -13,6 +13,10 @@
 		541A85F11DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A85F01DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m */; };
 		541A85F31DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A85F21DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl */; };
 		541A85F51DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */; };
+		542C18DF1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 542C18DE1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.m */; };
+		542C18E11DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 542C18E01DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl */; };
+		542C18E31DB4EC1800F7B6F4 /* ObjectConfettiFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 542C18E21DB4EC1800F7B6F4 /* ObjectConfettiFragment.glsl */; };
+		542C18E61DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 542C18E51DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.m */; };
 		545169F51DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 545169F41DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m */; };
 		545577F91D7FA4CD00D6DAC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577F81D7FA4CD00D6DAC1 /* main.m */; };
 		545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FB1D7FA4CD00D6DAC1 /* AppDelegate.m */; };
@@ -96,6 +100,12 @@
 		541A85F01DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectScaleBigAnimation.m; sourceTree = "<group>"; };
 		541A85F21DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectScaleBigVertex.glsl; sourceTree = "<group>"; };
 		541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectScaleBigFragment.glsl; sourceTree = "<group>"; };
+		542C18DD1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectConfettiAnimation.h; sourceTree = "<group>"; };
+		542C18DE1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectConfettiAnimation.m; sourceTree = "<group>"; };
+		542C18E01DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectConfettiVertex.glsl; sourceTree = "<group>"; };
+		542C18E21DB4EC1800F7B6F4 /* ObjectConfettiFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectConfettiFragment.glsl; sourceTree = "<group>"; };
+		542C18E41DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectConfettiSceneMesh.h; sourceTree = "<group>"; };
+		542C18E51DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectConfettiSceneMesh.m; sourceTree = "<group>"; };
 		545169F31DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationSimpleSceneMesh.h; sourceTree = "<group>"; };
 		545169F41DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationSimpleSceneMesh.m; sourceTree = "<group>"; };
 		545577F41D7FA4CD00D6DAC1 /* DHConcurrentAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHConcurrentAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +243,19 @@
 				541A85F41DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl */,
 			);
 			path = ScaleBig;
+			sourceTree = "<group>";
+		};
+		542C18DC1DB4EBD800F7B6F4 /* Confetti */ = {
+			isa = PBXGroup;
+			children = (
+				542C18DD1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.h */,
+				542C18DE1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.m */,
+				542C18E41DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.h */,
+				542C18E51DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.m */,
+				542C18E01DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl */,
+				542C18E21DB4EC1800F7B6F4 /* ObjectConfettiFragment.glsl */,
+			);
+			path = Confetti;
 			sourceTree = "<group>";
 		};
 		545577EB1D7FA4CD00D6DAC1 = {
@@ -446,6 +469,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				542C18DC1DB4EBD800F7B6F4 /* Confetti */,
 				5484BD2C1DAFA60B003387D9 /* Rotate */,
 				5484BD211DAF1DBE003387D9 /* Blinds */,
 				5484BD161DAE5ECD003387D9 /* Drop */,
@@ -604,6 +628,7 @@
 			files = (
 				541A85F31DAE0012001A9AE8 /* ObjectScaleBigVertex.glsl in Resources */,
 				54C373321D87EDA80021E2F2 /* ObjectClothLineFragment.glsl in Resources */,
+				542C18E31DB4EC1800F7B6F4 /* ObjectConfettiFragment.glsl in Resources */,
 				545578561D7FBE5000D6DAC1 /* 9.jpg in Resources */,
 				545578551D7FBE5000D6DAC1 /* 8.jpg in Resources */,
 				545578541D7FBE5000D6DAC1 /* 7.jpg in Resources */,
@@ -612,6 +637,7 @@
 				5455784F1D7FBE5000D6DAC1 /* 2.jpg in Resources */,
 				5455784D1D7FBE5000D6DAC1 /* 0.jpg in Resources */,
 				541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */,
+				542C18E11DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl in Resources */,
 				545578521D7FBE5000D6DAC1 /* 5.jpg in Resources */,
 				545578531D7FBE5000D6DAC1 /* 6.jpg in Resources */,
 				545578071D7FA4CD00D6DAC1 /* LaunchScreen.storyboard in Resources */,
@@ -672,6 +698,8 @@
 				5484BD191DAE5EDE003387D9 /* DHObjectDropAnimation.m in Sources */,
 				545578371D7FA65000D6DAC1 /* NSBKeyframeAnimationFunctions.c in Sources */,
 				545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */,
+				542C18E61DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.m in Sources */,
+				542C18DF1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.m in Sources */,
 				545169F51DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m in Sources */,
 				5484BD241DAF1DD9003387D9 /* DHObjectBlindsAnimation.m in Sources */,
 				54C3731E1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m in Sources */,

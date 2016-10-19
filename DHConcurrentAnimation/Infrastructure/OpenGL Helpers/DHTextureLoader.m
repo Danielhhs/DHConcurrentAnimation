@@ -48,6 +48,10 @@
     GLfloat screenScale = [UIScreen mainScreen].scale;
     GLfloat textureWidth = view.frame.size.width * screenScale;
     GLfloat textureHeight = view.frame.size.height * screenScale;
+    if (rotate == NO) {
+        textureWidth = view.bounds.size.width * screenScale;
+        textureHeight = view.bounds.size.height * screenScale;
+    }
     [DHTextureLoader drawOnTexture:texture textureWidth:(size_t)textureWidth textureHeight:(size_t)textureHeight drawBlock:^(CGContextRef context) {
         UIGraphicsPushContext(context);
         if (flipVertical) {

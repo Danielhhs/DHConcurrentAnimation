@@ -23,18 +23,21 @@ typedef struct {
 
 @property (nonatomic, strong) NSData *vertexData;
 @property (nonatomic, strong) NSData *indexData;
+@property (nonatomic, weak) UIView *target;
 @property (nonatomic) CGSize size;
 @property (nonatomic) CGPoint origin;
 @property (nonatomic) NSInteger vertexCount;
 @property (nonatomic) NSInteger indexCount;
 @property (nonatomic) NSInteger columnCount;
 @property (nonatomic) NSInteger rowCount;
+@property (nonatomic) CGFloat rotation;
 @property (nonatomic) BOOL columnMajored;
 @property (nonatomic) BOOL rotate;
 
 /**
  * Designated Initializer
  *
+ * @param target: animation target;
  * @param size: size of the target --> get it from the frame.size of your animation target;
  * @param origin: origin of the target --> get the bottom-left cornor coordinates for your animation target;
  * @param columnCount: columnCount of your animation;
@@ -42,12 +45,34 @@ typedef struct {
  * @param columnMajored: YES if the scene is columnMajored, NO if the scene is rowMajored;
  * @param rotate: If your target has been rotated, YES would mean to transform the position of each vertex, NO means just as a normal rectangle;
  */
-- (instancetype) initWithTargetSize:(CGSize)size
-                             origin:(CGPoint)origin
-                        columnCount:(NSInteger)columnCount
-                           rowCount:(NSInteger)rowCount
-                      columnMajored:(BOOL)columnMajored
-                             rotate:(BOOL)rotate;
+- (instancetype) initWithTarget:(UIView *)target
+                           size:(CGSize)size
+                         origin:(CGPoint)origin
+                    columnCount:(NSInteger)columnCount
+                       rowCount:(NSInteger)rowCount
+                  columnMajored:(BOOL)columnMajored
+                         rotate:(BOOL)rotate;
+
+/**
+ * Designated Initializer
+ *
+ * @param target: animation target;
+ * @param size: size of the target --> get it from the frame.size of your animation target;
+ * @param origin: origin of the target --> get the bottom-left cornor coordinates for your animation target;
+ * @param columnCount: columnCount of your animation;
+ * @param rowCount: rowCount of your animation;
+ * @param columnMajored: YES if the scene is columnMajored, NO if the scene is rowMajored;
+ * @param rotate: If your target has been rotated, YES would mean to transform the position of each vertex, NO means just as a normal rectangle;
+ * @param rotation: the angle that your target is rotated (in radians);
+ */
+- (instancetype) initWithTarget:(UIView *)target
+                           size:(CGSize)size
+                         origin:(CGPoint)origin
+                    columnCount:(NSInteger)columnCount
+                       rowCount:(NSInteger)rowCount
+                  columnMajored:(BOOL)columnMajored
+                         rotate:(BOOL)rotate
+                           rotation:(CGFloat)rotation;
 
 #pragma mark - Public APIs
 /**
@@ -107,7 +132,11 @@ typedef struct {
 //Call this method to generate
 - (void) generateIndicesData;
 
+//Rotate the position if necessary;
+- (GLKVector3) rotatePositionForPosition:(GLKVector3)position;
+
 #pragma mark - For debugging
 - (void) printGeometryData;
 - (void) printIndices;
+- (void) printVertices;
 @end

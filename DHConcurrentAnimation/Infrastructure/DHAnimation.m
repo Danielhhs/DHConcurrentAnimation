@@ -35,11 +35,7 @@
 - (void) setUpTargetGeometry
 {
     self.targetOrigin = CGPointMake(self.settings.targetView.frame.origin.x, self.settings.animationView.bounds.size.height - CGRectGetMaxY(self.settings.targetView.frame));
-    if (self.settings.rotateTexture == YES) {
-        self.targetSize = self.settings.targetView.bounds.size;
-    } else {
-        self.targetSize = self.settings.targetView.frame.size;
-    }
+    self.targetSize = self.settings.targetView.frame.size;
 }
 
 - (void) setupGL
@@ -59,11 +55,17 @@
     directionLoc = glGetUniformLocation(program, "u_direction");
     eventLoc = glGetUniformLocation(program, "u_event");
     percentLoc = glGetUniformLocation(program, "u_percent");
+    [self setupExtraUniforms];
+}
+
+- (void) setupExtraUniforms
+{
+    
 }
 
 - (void) setupMeshes
 {
-    self.mesh = [[DHAnimationSimpleSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:1 rowCount:1 columnMajored:YES rotate:NO];
+    self.mesh = [[DHAnimationSimpleSceneMesh alloc] initWithTarget:self.settings.targetView size:self.targetSize origin:self.targetOrigin columnCount:1 rowCount:1 columnMajored:YES rotate:NO];
     [self.mesh generateMeshesData];
 }
 

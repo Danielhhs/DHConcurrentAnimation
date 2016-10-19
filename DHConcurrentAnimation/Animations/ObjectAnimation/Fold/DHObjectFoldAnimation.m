@@ -27,9 +27,8 @@
     return @"ObjectFoldFragment.glsl";
 }
 
-- (void) setupUniforms
+- (void) setupExtraUniforms
 {
-    [super setupUniforms];
     columnWidthLoc = glGetUniformLocation(program, "u_columnWidth");
     headerHeightLoc = glGetUniformLocation(program, "u_headerHeight");
     originLoc = glGetUniformLocation(program, "u_origin");
@@ -37,7 +36,7 @@
 
 - (void) setupMeshes
 {
-    DHObjectFoldSceneMesh *mesh = [[DHObjectFoldSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:self.settings.columnCount rowCount:self.settings.rowCount columnMajored:YES rotate:NO];
+    DHObjectFoldSceneMesh *mesh = [[DHObjectFoldSceneMesh alloc] initWithTarget:self.settings.targetView size:self.targetSize origin:self.targetOrigin columnCount:self.settings.columnCount rowCount:self.settings.rowCount columnMajored:YES rotate:NO];
     mesh.direction = self.settings.direction;
     mesh.headerHeight = self.headerLength;
     [mesh generateMeshesData];

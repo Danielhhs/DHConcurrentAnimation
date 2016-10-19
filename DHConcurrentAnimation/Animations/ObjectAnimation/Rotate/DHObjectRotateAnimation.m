@@ -26,9 +26,8 @@
     return @"ObjectRotateFragment.glsl";
 }
 
-- (void) setupUniforms
+- (void) setupExtraUniforms
 {
-    [super setupUniforms];
     targetCenterLoc = glGetUniformLocation(program, "u_targetCenter");
     targetWidthLoc = glGetUniformLocation(program, "u_targetWidth");
     rotationRadiusLoc = glGetUniformLocation(program, "u_rotationRadius");

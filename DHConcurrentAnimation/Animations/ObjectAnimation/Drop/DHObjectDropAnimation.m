@@ -25,9 +25,8 @@
     return @"ObjectDropFragment.glsl";
 }
 
-- (void) setupUniforms
+- (void) setupExtraUniforms
 {
-    [super setupUniforms];
     offsetLoc = glGetUniformLocation(program, "u_offset");
     self.offset = self.settings.animationView.frame.size.height - self.targetOrigin.y;
 }

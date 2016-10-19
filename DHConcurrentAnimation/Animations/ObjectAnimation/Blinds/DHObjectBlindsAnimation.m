@@ -27,9 +27,8 @@
     return @"ObjectBlindsFragment.glsl";
 }
 
-- (void) setupUniforms
+- (void) setupExtraUniforms
 {
-    [super setupUniforms];
     columnWidthLoc = glGetUniformLocation(program, "u_columnWidth");
     columnHeightLoc = glGetUniformLocation(program, "u_columnHeight");
     self.columnWidth = self.settings.targetView.frame.size.width / self.settings.columnCount;
@@ -47,7 +46,7 @@
     } else {
         rowCount = 1;
     }
-    self.mesh = [[DHAnimationSimpleSceneMesh alloc] initWithTargetSize:self.targetSize origin:self.targetOrigin columnCount:columnCount rowCount:rowCount columnMajored:columnMajored rotate:NO];
+    self.mesh = [[DHAnimationSimpleSceneMesh alloc] initWithTarget:self.settings.targetView size:self.targetSize origin:self.targetOrigin columnCount:columnCount rowCount:rowCount columnMajored:columnMajored rotate:NO];
     [self.mesh generateMeshesData];
 }
 
