@@ -23,6 +23,7 @@
     GLuint texture;
     GLuint mvpLoc, samplerLoc, timeLoc, durationLoc, directionLoc, eventLoc, percentLoc;
 }
+@property (nonatomic) DHObjectAnimationType animationType;
 @property (nonatomic, readonly) BOOL readyToAnimate;
 @property (nonatomic, strong) EAGLContext *context;
 @property (nonatomic) NSTimeInterval elapsedTime;
@@ -52,5 +53,10 @@
 - (void) setupTexture;
 - (void) setupExtraUniforms;
 - (void) updateWithTimeInterval:(NSTimeInterval)timeInterval;
+
+- (void) tearDownMeshes;
+- (void) tearDownTextures;
+- (void) tearDownExtraGLResource;
+- (void) tearDownPrograms;
 
 @end

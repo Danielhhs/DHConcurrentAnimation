@@ -27,6 +27,7 @@
 {
     self = [super initWithFrame:frame context:context];
     if (self) {
+        self.drawableMultisample = GLKViewDrawableMultisample4X;
         [self setupMvpMatrix];
         self.animations = [NSMutableArray array];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(handleTap:)];

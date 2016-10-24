@@ -58,6 +58,11 @@
             settings.rowCount = 25;
             break;
         }
+        case DHObjectAnimationTypeShredder: {
+            settings.columnCount = 10;
+            settings.duration = 3.5;
+            break;
+        }
         default: {
             settings.columnCount = 1;
             settings.rowCount =1 ;

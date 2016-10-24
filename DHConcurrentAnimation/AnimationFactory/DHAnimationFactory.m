@@ -16,6 +16,7 @@
 #import "DHObjectBlindsAnimation.h"
 #import "DHObjectRotateAnimation.h"
 #import "DHObjectConfettiAnimation.h"
+#import "DHObjectShredderAnimation.h"
 static NSArray *transitions;
 static NSArray *builtInAnimations;
 static NSArray *builtOutAnimations;
@@ -42,6 +43,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeRotate;
     } else if ([animationName isEqualToString:@"Confetti"]) {
         return DHObjectAnimationTypeConfetti;
+    } else if ([animationName isEqualToString:@"Shredder"]) {
+        return DHObjectAnimationTypeShredder;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -66,7 +69,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti", @"Shredder"];
     }
     return builtOutAnimations;
 }
@@ -137,10 +140,15 @@ static NSArray *textAnimations;
             animation = [[DHObjectConfettiAnimation alloc] init];
             break;
         }
+        case DHObjectAnimationTypeShredder: {
+            animation = [[DHObjectShredderAnimation alloc] init];
+            break;
+        }
         default:
             break;
     }
     animation.settings = settings;
+    animation.animationType = type;
     return animation;
 }
 @end

@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/AnimationFactory/DHAnimationFactory.m"
-            timestampString = "498398198.051509"
+            timestampString = "498568624.054226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "+animationOfType:event:forTarget:animationView:settings:"
             landmarkType = "7">
          </BreakpointContent>
@@ -51,13 +51,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DHConcurrentAnimation/Infrastructure/SceneMesh/DHAnimationSplitSceneMesh.m"
-            timestampString = "498464473.452282"
+            filePath = "DHConcurrentAnimation/Animations/ObjectAnimation/Shredder/DHObjectShredderAnimation.m"
+            timestampString = "498993583.734085"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-generateColumnMajoredGeometryAttributes"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-setupMeshes"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHConcurrentAnimation/Animations/ObjectAnimation/Shredder/DHObjectShredderAnimation.m"
+            timestampString = "498995154.037577"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-drawFrame"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHConcurrentAnimation/Animations/ObjectAnimation/Shredder/DHObjectShredderMesh.m"
+            timestampString = "498993014.892843"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "-generateMeshesData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHConcurrentAnimation/Infrastructure/SceneMesh/DHAnimationSceneMesh.m"
+            timestampString = "498993116.905039"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-printGeometryData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHConcurrentAnimation/Infrastructure/OpenGL Helpers/DHTextureLoader.m"
+            timestampString = "498993221.620793"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "+drawOnTexture:textureWidth:textureHeight:drawBlock:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

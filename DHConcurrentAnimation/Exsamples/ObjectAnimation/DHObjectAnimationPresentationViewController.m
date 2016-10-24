@@ -33,7 +33,7 @@
     self.animationView.delegate = self;
     dispatch_queue_t animationSetUpQ = dispatch_queue_create("setUpAnimations", NULL);
         for (DHAnimation *animation in self.animations) {
-            UIView *animationTarget = [self randomAnimationTarget];
+            UIView *animationTarget = [self randomAnimationTargetForAnimationType:animation.animationType];
             [self.animationTargets addObject:animationTarget];
             animation.settings.targetView = animationTarget;
             animation.settings.animationView = self.animationView;
@@ -52,7 +52,7 @@
 
 - (void) addAnimationOfType:(DHObjectAnimationType)type event:(DHAnimationEvent)event
 {
-    UIImageView *animationTarget = [self randomAnimationTarget];
+    UIImageView *animationTarget = [self randomAnimationTargetForAnimationType:type];
     DHAnimation *animation = [DHAnimationFactory animationOfType:type event:event forTarget:animationTarget animationView:self.animationView];
     
     animation.mvpMatrix = self.animationView.mvpMatrix;
@@ -74,8 +74,15 @@
     [self.animationView draw];
 }
 
-- (UIImageView *) randomAnimationTarget
+- (UIImageView *) randomAnimationTargetForAnimationType:(DHObjectAnimationType)animationType
 {
+    if (animationType == DHObjectAnimationTypeShredder) {
+        UIImageView *target = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
+        target.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+        target.contentMode = UIViewContentModeScaleToFill;
+        target.image = [self randomImage];
+        return target;
+    }
     CGRect randomRect = CGRectMake(0, 0, arc4random() % 50 + 100, arc4random() % 150 + 75);
     UIImageView *target = [[UIImageView alloc] initWithFrame:randomRect];
     target.image = [self randomImage];

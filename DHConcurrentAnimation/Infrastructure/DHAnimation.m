@@ -25,6 +25,7 @@
     [self setUpTargetGeometry];
     [self setupGL];
     [self setupMeshes];
+    self.displayed = NO;
     self.readyToAnimate = YES;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self setupTexture];
