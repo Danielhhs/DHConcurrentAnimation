@@ -17,6 +17,7 @@
 #import "DHObjectRotateAnimation.h"
 #import "DHObjectConfettiAnimation.h"
 #import "DHObjectShredderAnimation.h"
+#import "DHObjectCompressAnimation.h"
 static NSArray *transitions;
 static NSArray *builtInAnimations;
 static NSArray *builtOutAnimations;
@@ -45,6 +46,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeConfetti;
     } else if ([animationName isEqualToString:@"Shredder"]) {
         return DHObjectAnimationTypeShredder;
+    } else if ([animationName isEqualToString:@"Compress"]) {
+        return DHObjectAnimationTypeCompress;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -69,7 +72,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti", @"Shredder"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti", @"Shredder", @"Compress"];
     }
     return builtOutAnimations;
 }
@@ -142,6 +145,10 @@ static NSArray *textAnimations;
         }
         case DHObjectAnimationTypeShredder: {
             animation = [[DHObjectShredderAnimation alloc] init];
+            break;
+        }
+        case DHObjectAnimationTypeCompress: {
+            animation = [[DHObjectCompressAnimation alloc] init];
             break;
         }
         default:

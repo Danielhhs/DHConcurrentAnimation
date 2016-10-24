@@ -101,6 +101,9 @@
             case DHObjectAnimationTypeBlinds:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseInBack;
                 break;
+            case DHObjectAnimationTypeCompress:
+                settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutCubic;
+                break;
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;
                 break;

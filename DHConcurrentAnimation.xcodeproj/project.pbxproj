@@ -28,6 +28,9 @@
 		542C19081DB78C7E00F7B6F4 /* ObjectShredderPiecesFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 542C19021DB78C7E00F7B6F4 /* ObjectShredderPiecesFragment.glsl */; };
 		542C19091DB78C7E00F7B6F4 /* ObjectShredderPiecesVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 542C19031DB78C7E00F7B6F4 /* ObjectShredderPiecesVertex.glsl */; };
 		542C190A1DB78C7E00F7B6F4 /* ObjectShredderVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 542C19041DB78C7E00F7B6F4 /* ObjectShredderVertex.glsl */; };
+		542C19E91DBE107800F7B6F4 /* DHObjectCompressAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 542C19E81DBE107800F7B6F4 /* DHObjectCompressAnimation.m */; };
+		542C19EB1DBE108F00F7B6F4 /* ObjectCompressVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 542C19EA1DBE108F00F7B6F4 /* ObjectCompressVertex.glsl */; };
+		542C19ED1DBE109C00F7B6F4 /* ObjectCompressFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 542C19EC1DBE109C00F7B6F4 /* ObjectCompressFragment.glsl */; };
 		545169F51DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 545169F41DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m */; };
 		545577F91D7FA4CD00D6DAC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577F81D7FA4CD00D6DAC1 /* main.m */; };
 		545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 545577FB1D7FA4CD00D6DAC1 /* AppDelegate.m */; };
@@ -132,6 +135,10 @@
 		542C19021DB78C7E00F7B6F4 /* ObjectShredderPiecesFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectShredderPiecesFragment.glsl; sourceTree = "<group>"; };
 		542C19031DB78C7E00F7B6F4 /* ObjectShredderPiecesVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectShredderPiecesVertex.glsl; sourceTree = "<group>"; };
 		542C19041DB78C7E00F7B6F4 /* ObjectShredderVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectShredderVertex.glsl; sourceTree = "<group>"; };
+		542C19E71DBE107800F7B6F4 /* DHObjectCompressAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectCompressAnimation.h; sourceTree = "<group>"; };
+		542C19E81DBE107800F7B6F4 /* DHObjectCompressAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectCompressAnimation.m; sourceTree = "<group>"; };
+		542C19EA1DBE108F00F7B6F4 /* ObjectCompressVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectCompressVertex.glsl; sourceTree = "<group>"; };
+		542C19EC1DBE109C00F7B6F4 /* ObjectCompressFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectCompressFragment.glsl; sourceTree = "<group>"; };
 		545169F31DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationSimpleSceneMesh.h; sourceTree = "<group>"; };
 		545169F41DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationSimpleSceneMesh.m; sourceTree = "<group>"; };
 		545577F41D7FA4CD00D6DAC1 /* DHConcurrentAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DHConcurrentAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +311,17 @@
 				542C18FD1DB776F900F7B6F4 /* DHShredderPieceSceneMesh.m */,
 			);
 			path = Shredder;
+			sourceTree = "<group>";
+		};
+		542C19E61DBE106400F7B6F4 /* Compress */ = {
+			isa = PBXGroup;
+			children = (
+				542C19E71DBE107800F7B6F4 /* DHObjectCompressAnimation.h */,
+				542C19E81DBE107800F7B6F4 /* DHObjectCompressAnimation.m */,
+				542C19EA1DBE108F00F7B6F4 /* ObjectCompressVertex.glsl */,
+				542C19EC1DBE109C00F7B6F4 /* ObjectCompressFragment.glsl */,
+			);
+			path = Compress;
 			sourceTree = "<group>";
 		};
 		545577EB1D7FA4CD00D6DAC1 = {
@@ -517,6 +535,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				542C19E61DBE106400F7B6F4 /* Compress */,
 				542C18F01DB7719600F7B6F4 /* Shredder */,
 				542C18DC1DB4EBD800F7B6F4 /* Confetti */,
 				5484BD2C1DAFA60B003387D9 /* Rotate */,
@@ -685,8 +704,10 @@
 				545578511D7FBE5000D6DAC1 /* 4.jpg in Resources */,
 				542C19091DB78C7E00F7B6F4 /* ObjectShredderPiecesVertex.glsl in Resources */,
 				5460E7171D8FDE4F000CC5D1 /* ObjectFoldFragment.glsl in Resources */,
+				542C19ED1DBE109C00F7B6F4 /* ObjectCompressFragment.glsl in Resources */,
 				542C19061DB78C7E00F7B6F4 /* ObjectShredderConfettiVertex.glsl in Resources */,
 				542C19051DB78C7E00F7B6F4 /* ObjectShredderConfettiFragment.glsl in Resources */,
+				542C19EB1DBE108F00F7B6F4 /* ObjectCompressVertex.glsl in Resources */,
 				5455784F1D7FBE5000D6DAC1 /* 2.jpg in Resources */,
 				5455784D1D7FBE5000D6DAC1 /* 0.jpg in Resources */,
 				541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */,
@@ -743,6 +764,7 @@
 				542C18F81DB776B600F7B6F4 /* DHObjectShredderMesh.m in Sources */,
 				54C373391D87F6B50021E2F2 /* DHTextureLoader.m in Sources */,
 				541A85F11DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m in Sources */,
+				542C19E91DBE107800F7B6F4 /* DHObjectCompressAnimation.m in Sources */,
 				54C373411D87F9400021E2F2 /* DHAnimationFactory.m in Sources */,
 				5484BD2F1DAFA62D003387D9 /* DHObjectRotateAnimation.m in Sources */,
 				541A85951DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m in Sources */,
