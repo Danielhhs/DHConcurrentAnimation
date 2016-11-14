@@ -51,6 +51,7 @@
 - (void) setUpTargetGeometry;
 - (void) setupMeshes;
 - (void) setupTexture;
+- (void) setupEffects;
 - (void) setupExtraUniforms;
 - (void) updateWithTimeInterval:(NSTimeInterval)timeInterval;
 

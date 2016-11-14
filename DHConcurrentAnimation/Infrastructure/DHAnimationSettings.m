@@ -62,6 +62,10 @@
             settings.columnCount = 10;
             settings.duration = 3.5;
             break;
+        } case DHObjectAnimationTypeShimmer: {
+            settings.columnCount = 10;
+            settings.rowCount = 10;
+            break;
         }
         default: {
             settings.columnCount = 1;
@@ -87,6 +91,9 @@
             case DHObjectAnimationTypeBlinds:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutBack;
                 break;
+            case DHObjectAnimationTypeShimmer:
+                settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutCubic;
+                break;
             default:
                 settings.timingFunction = NSBKeyframeAnimationFunctionLinear;
                 break;
@@ -96,6 +103,7 @@
             case DHObjectAnimationTypeScale:
             case DHObjectAnimationTypeScaleBig:
             case DHObjectAnimationTypeRotate:
+            case DHObjectAnimationTypeShimmer:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseInCubic;
                 break;
             case DHObjectAnimationTypeBlinds:

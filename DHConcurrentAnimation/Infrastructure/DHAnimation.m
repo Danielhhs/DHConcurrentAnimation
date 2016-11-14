@@ -29,6 +29,7 @@
     self.readyToAnimate = YES;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self setupTexture];
+        [self setupEffects];
         [self.delegate animationDidFinishSettingUp:self];
     });
 }
@@ -68,6 +69,11 @@
 {
     self.mesh = [[DHAnimationSimpleSceneMesh alloc] initWithTarget:self.settings.targetView size:self.targetSize origin:self.targetOrigin columnCount:1 rowCount:1 columnMajored:YES rotate:NO];
     [self.mesh generateMeshesData];
+}
+
+- (void) setupEffects
+{
+    
 }
 
 - (void) setupTexture

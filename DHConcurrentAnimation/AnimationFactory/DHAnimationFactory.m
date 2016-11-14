@@ -18,6 +18,7 @@
 #import "DHObjectConfettiAnimation.h"
 #import "DHObjectShredderAnimation.h"
 #import "DHObjectCompressAnimation.h"
+#import "DHObjectShimmerAnimation.h"
 static NSArray *transitions;
 static NSArray *builtInAnimations;
 static NSArray *builtOutAnimations;
@@ -48,6 +49,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeShredder;
     } else if ([animationName isEqualToString:@"Compress"]) {
         return DHObjectAnimationTypeCompress;
+    } else if ([animationName isEqualToString:@"Shimmer"]) {
+        return DHObjectAnimationTypeShimmer;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -64,7 +67,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds", @"Rotate", @"Confetti"];
+        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds", @"Rotate", @"Confetti", @"Shimmer"];
     }
     return builtInAnimations;
 }
@@ -72,7 +75,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti", @"Shredder", @"Compress"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti", @"Shredder", @"Compress", @"Shimmer"];
     }
     return builtOutAnimations;
 }
@@ -149,6 +152,10 @@ static NSArray *textAnimations;
         }
         case DHObjectAnimationTypeCompress: {
             animation = [[DHObjectCompressAnimation alloc] init];
+            break;
+        }
+        case DHObjectAnimationTypeShimmer: {
+            animation = [[DHObjectShimmerAnimation alloc] init];
             break;
         }
         default:

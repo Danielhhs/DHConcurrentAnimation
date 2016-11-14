@@ -86,6 +86,18 @@
 		54C373391D87F6B50021E2F2 /* DHTextureLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C373371D87F6B50021E2F2 /* DHTextureLoader.m */; };
 		54C373411D87F9400021E2F2 /* DHAnimationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C373401D87F9400021E2F2 /* DHAnimationFactory.m */; };
 		54C373471D88DFDD0021E2F2 /* DHAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C373461D88DFDD0021E2F2 /* DHAnimationView.m */; };
+		54DC3DC71DBE1F5C00570620 /* DHParticleEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DC3DC61DBE1F5C00570620 /* DHParticleEffect.m */; };
+		54DC3DCB1DBE266700570620 /* DHShimmerEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DC3DCA1DBE266700570620 /* DHShimmerEffect.m */; };
+		54DC3DCD1DBE268100570620 /* ParticleShimmerVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54DC3DCC1DBE268100570620 /* ParticleShimmerVertex.glsl */; };
+		54DC3DCF1DBE268E00570620 /* ParticleShimmerFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54DC3DCE1DBE268E00570620 /* ParticleShimmerFragment.glsl */; };
+		54DC3DD11DBE26BC00570620 /* star_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DC3DD01DBE26BC00570620 /* star_white.png */; };
+		54DC3DD41DBE297C00570620 /* DHShiningStarEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DC3DD31DBE297C00570620 /* DHShiningStarEffect.m */; };
+		54DC3DD61DBE2C5300570620 /* ParticleShiningStarVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54DC3DD51DBE2C5300570620 /* ParticleShiningStarVertex.glsl */; };
+		54DC3DD81DBE2C6500570620 /* ParticleShiningStarFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54DC3DD71DBE2C6500570620 /* ParticleShiningStarFragment.glsl */; };
+		54DC3DDC1DBE2CB600570620 /* DHObjectShimmerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DC3DDB1DBE2CB600570620 /* DHObjectShimmerAnimation.m */; };
+		54DC3DE11DBE328000570620 /* ObjectShimmerVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54DC3DE01DBE328000570620 /* ObjectShimmerVertex.glsl */; };
+		54DC3DE31DBE328F00570620 /* ObjectShimmerFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54DC3DE21DBE328F00570620 /* ObjectShimmerFragment.glsl */; };
+		54DC3DE61DBE32D300570620 /* DHShimmerSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DC3DE51DBE32D300570620 /* DHShimmerSceneMesh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +238,23 @@
 		54C373401D87F9400021E2F2 /* DHAnimationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationFactory.m; sourceTree = "<group>"; };
 		54C373451D88DFDD0021E2F2 /* DHAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationView.h; sourceTree = "<group>"; };
 		54C373461D88DFDD0021E2F2 /* DHAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationView.m; sourceTree = "<group>"; };
+		54DC3DC51DBE1F5C00570620 /* DHParticleEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHParticleEffect.h; sourceTree = "<group>"; };
+		54DC3DC61DBE1F5C00570620 /* DHParticleEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHParticleEffect.m; sourceTree = "<group>"; };
+		54DC3DC91DBE266700570620 /* DHShimmerEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHShimmerEffect.h; sourceTree = "<group>"; };
+		54DC3DCA1DBE266700570620 /* DHShimmerEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHShimmerEffect.m; sourceTree = "<group>"; };
+		54DC3DCC1DBE268100570620 /* ParticleShimmerVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleShimmerVertex.glsl; sourceTree = "<group>"; };
+		54DC3DCE1DBE268E00570620 /* ParticleShimmerFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleShimmerFragment.glsl; sourceTree = "<group>"; };
+		54DC3DD01DBE26BC00570620 /* star_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_white.png; sourceTree = "<group>"; };
+		54DC3DD21DBE297C00570620 /* DHShiningStarEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHShiningStarEffect.h; sourceTree = "<group>"; };
+		54DC3DD31DBE297C00570620 /* DHShiningStarEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHShiningStarEffect.m; sourceTree = "<group>"; };
+		54DC3DD51DBE2C5300570620 /* ParticleShiningStarVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleShiningStarVertex.glsl; sourceTree = "<group>"; };
+		54DC3DD71DBE2C6500570620 /* ParticleShiningStarFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleShiningStarFragment.glsl; sourceTree = "<group>"; };
+		54DC3DDA1DBE2CB600570620 /* DHObjectShimmerAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectShimmerAnimation.h; sourceTree = "<group>"; };
+		54DC3DDB1DBE2CB600570620 /* DHObjectShimmerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectShimmerAnimation.m; sourceTree = "<group>"; };
+		54DC3DE01DBE328000570620 /* ObjectShimmerVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectShimmerVertex.glsl; sourceTree = "<group>"; };
+		54DC3DE21DBE328F00570620 /* ObjectShimmerFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectShimmerFragment.glsl; sourceTree = "<group>"; };
+		54DC3DE41DBE32D300570620 /* DHShimmerSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHShimmerSceneMesh.h; sourceTree = "<group>"; };
+		54DC3DE51DBE32D300570620 /* DHShimmerSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHShimmerSceneMesh.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +438,8 @@
 				545578391D7FA6BB00D6DAC1 /* DHAnimationEnums.m */,
 				54C373451D88DFDD0021E2F2 /* DHAnimationView.h */,
 				54C373461D88DFDD0021E2F2 /* DHAnimationView.m */,
+				54DC3DC51DBE1F5C00570620 /* DHParticleEffect.h */,
+				54DC3DC61DBE1F5C00570620 /* DHParticleEffect.m */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -511,6 +542,7 @@
 		54C3731F1D87EA350021E2F2 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				54DC3DC41DBE1ECC00570620 /* Particle Effects */,
 				54C373241D87ECC00021E2F2 /* ObjectAnimation */,
 				54C373221D87EA350021E2F2 /* TextAnimation */,
 				54C373231D87EA350021E2F2 /* Transition */,
@@ -535,6 +567,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				54DC3DD91DBE2C9B00570620 /* Shimmer */,
 				542C19E61DBE106400F7B6F4 /* Compress */,
 				542C18F01DB7719600F7B6F4 /* Shredder */,
 				542C18DC1DB4EBD800F7B6F4 /* Confetti */,
@@ -588,6 +621,43 @@
 				54C373401D87F9400021E2F2 /* DHAnimationFactory.m */,
 			);
 			path = AnimationFactory;
+			sourceTree = "<group>";
+		};
+		54DC3DC41DBE1ECC00570620 /* Particle Effects */ = {
+			isa = PBXGroup;
+			children = (
+				54DC3DC81DBE258400570620 /* Shimmer */,
+			);
+			path = "Particle Effects";
+			sourceTree = "<group>";
+		};
+		54DC3DC81DBE258400570620 /* Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				54DC3DD01DBE26BC00570620 /* star_white.png */,
+				54DC3DC91DBE266700570620 /* DHShimmerEffect.h */,
+				54DC3DCA1DBE266700570620 /* DHShimmerEffect.m */,
+				54DC3DCC1DBE268100570620 /* ParticleShimmerVertex.glsl */,
+				54DC3DCE1DBE268E00570620 /* ParticleShimmerFragment.glsl */,
+				54DC3DD21DBE297C00570620 /* DHShiningStarEffect.h */,
+				54DC3DD31DBE297C00570620 /* DHShiningStarEffect.m */,
+				54DC3DD51DBE2C5300570620 /* ParticleShiningStarVertex.glsl */,
+				54DC3DD71DBE2C6500570620 /* ParticleShiningStarFragment.glsl */,
+			);
+			path = Shimmer;
+			sourceTree = "<group>";
+		};
+		54DC3DD91DBE2C9B00570620 /* Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				54DC3DDA1DBE2CB600570620 /* DHObjectShimmerAnimation.h */,
+				54DC3DDB1DBE2CB600570620 /* DHObjectShimmerAnimation.m */,
+				54DC3DE41DBE32D300570620 /* DHShimmerSceneMesh.h */,
+				54DC3DE51DBE32D300570620 /* DHShimmerSceneMesh.m */,
+				54DC3DE01DBE328000570620 /* ObjectShimmerVertex.glsl */,
+				54DC3DE21DBE328F00570620 /* ObjectShimmerFragment.glsl */,
+			);
+			path = Shimmer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -711,6 +781,7 @@
 				5455784F1D7FBE5000D6DAC1 /* 2.jpg in Resources */,
 				5455784D1D7FBE5000D6DAC1 /* 0.jpg in Resources */,
 				541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */,
+				54DC3DE31DBE328F00570620 /* ObjectShimmerFragment.glsl in Resources */,
 				542C18E11DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl in Resources */,
 				545578521D7FBE5000D6DAC1 /* 5.jpg in Resources */,
 				545578531D7FBE5000D6DAC1 /* 6.jpg in Resources */,
@@ -718,19 +789,25 @@
 				542C19081DB78C7E00F7B6F4 /* ObjectShredderPiecesFragment.glsl in Resources */,
 				541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */,
 				545578041D7FA4CD00D6DAC1 /* Assets.xcassets in Resources */,
+				54DC3DD61DBE2C5300570620 /* ParticleShiningStarVertex.glsl in Resources */,
 				541A85F51DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl in Resources */,
 				5484BD2B1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl in Resources */,
 				5484BD291DAF1EDC003387D9 /* ObjectBlindsVertex.glsl in Resources */,
 				545578021D7FA4CD00D6DAC1 /* Main.storyboard in Resources */,
 				5484BD311DAFA63E003387D9 /* ObjectRotateVertex.glsl in Resources */,
 				5484BD331DAFA64C003387D9 /* ObjectRotateFragment.glsl in Resources */,
+				54DC3DD81DBE2C6500570620 /* ParticleShiningStarFragment.glsl in Resources */,
 				5484BD201DAE612E003387D9 /* ObjectDropFragment.glsl in Resources */,
 				54C373301D87ED9D0021E2F2 /* ObjectClothLineVertex.glsl in Resources */,
 				545578501D7FBE5000D6DAC1 /* 3.jpg in Resources */,
+				54DC3DCF1DBE268E00570620 /* ParticleShimmerFragment.glsl in Resources */,
 				542C190A1DB78C7E00F7B6F4 /* ObjectShredderVertex.glsl in Resources */,
 				5484BD1E1DAE6120003387D9 /* ObjectDropVertex.glsl in Resources */,
 				5455784E1D7FBE5000D6DAC1 /* 1.jpg in Resources */,
 				542C19071DB78C7E00F7B6F4 /* ObjectShredderFragment.glsl in Resources */,
+				54DC3DCD1DBE268100570620 /* ParticleShimmerVertex.glsl in Resources */,
+				54DC3DD11DBE26BC00570620 /* star_white.png in Resources */,
+				54DC3DE11DBE328000570620 /* ObjectShimmerVertex.glsl in Resources */,
 				5460E7151D8FDE44000CC5D1 /* ObjectFoldVertex.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -764,10 +841,12 @@
 				542C18F81DB776B600F7B6F4 /* DHObjectShredderMesh.m in Sources */,
 				54C373391D87F6B50021E2F2 /* DHTextureLoader.m in Sources */,
 				541A85F11DADFEA8001A9AE8 /* DHObjectScaleBigAnimation.m in Sources */,
+				54DC3DD41DBE297C00570620 /* DHShiningStarEffect.m in Sources */,
 				542C19E91DBE107800F7B6F4 /* DHObjectCompressAnimation.m in Sources */,
 				54C373411D87F9400021E2F2 /* DHAnimationFactory.m in Sources */,
 				5484BD2F1DAFA62D003387D9 /* DHObjectRotateAnimation.m in Sources */,
 				541A85951DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m in Sources */,
+				54DC3DE61DBE32D300570620 /* DHShimmerSceneMesh.m in Sources */,
 				5460E70C1D8FD170000CC5D1 /* DHBuiltOutAnimationTypeChooseTableViewController.m in Sources */,
 				542C18F31DB771A800F7B6F4 /* DHObjectShredderAnimation.m in Sources */,
 				5460E7101D8FD4AA000CC5D1 /* DHObjectFoldAnimation.m in Sources */,
@@ -778,13 +857,16 @@
 				54C3732B1D87ECEA0021E2F2 /* DHObjectClothLineAnimation.m in Sources */,
 				542C18FE1DB776F900F7B6F4 /* DHShredderPieceSceneMesh.m in Sources */,
 				5484BD191DAE5EDE003387D9 /* DHObjectDropAnimation.m in Sources */,
+				54DC3DCB1DBE266700570620 /* DHShimmerEffect.m in Sources */,
 				545578371D7FA65000D6DAC1 /* NSBKeyframeAnimationFunctions.c in Sources */,
 				545577FC1D7FA4CD00D6DAC1 /* AppDelegate.m in Sources */,
 				542C18E61DB4EF8D00F7B6F4 /* DHObjectConfettiSceneMesh.m in Sources */,
+				54DC3DC71DBE1F5C00570620 /* DHParticleEffect.m in Sources */,
 				542C18DF1DB4EBF600F7B6F4 /* DHObjectConfettiAnimation.m in Sources */,
 				545169F51DAFAFB100C97C4E /* DHAnimationSimpleSceneMesh.m in Sources */,
 				5484BD241DAF1DD9003387D9 /* DHObjectBlindsAnimation.m in Sources */,
 				54C3731E1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m in Sources */,
+				54DC3DDC1DBE2CB600570620 /* DHObjectShimmerAnimation.m in Sources */,
 				545578341D7FA58500D6DAC1 /* DHAnimationSettings.m in Sources */,
 				54C3731B1D8645880021E2F2 /* DHAnimationSplitSceneMesh.m in Sources */,
 				54A52FB41D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m in Sources */,
