@@ -137,6 +137,11 @@ typedef struct {
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
     glUniform1i(samplerLoc, 0);
+    
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, backgroundTexture);
+    glUniform1i(backgroundSamplerLoc, 1);
+    
     glDrawArrays(GL_POINTS, 0, (GLsizei)[self.particleData length] / sizeof(DHShimmerParticleAttributes));
     glBindVertexArray(0);
 }
@@ -181,6 +186,7 @@ typedef struct {
             } else {
                 particle.isEdge = 0;
             }
+            NSLog(@"texture = (%g, %g)", particle.texCoords.x, particle.texCoords.y);
             [self.particleData appendBytes:&particle length:sizeof(particle)];
         }
     }
@@ -205,5 +211,6 @@ typedef struct {
 - (void) setupTextures
 {
     texture = [DHTextureLoader loadTextureWithImage:[UIImage imageNamed:self.particleImageName]];
+    backgroundTexture = [DHTextureLoader loadTextureWithView:self.targetView];
 }
 @end

@@ -51,7 +51,6 @@
 {
     self.shimmerEffect = [[DHShimmerEffect alloc] initWithContext:self.context columnCount:self.settings.columnCount rowCount:self.settings.rowCount targetView:self.settings.targetView containerView:self.settings.animationView offsetData:self.offsetData event:self.settings.event];
     self.shimmerEffect.mvpMatrix = self.mvpMatrix;
-    [self.shimmerEffect generateParticleData];
 }
 
 - (GLfloat) randomOffset

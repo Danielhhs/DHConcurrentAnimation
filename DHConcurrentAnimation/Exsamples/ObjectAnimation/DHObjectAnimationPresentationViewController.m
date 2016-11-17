@@ -76,7 +76,7 @@
 
 - (UIImageView *) randomAnimationTargetForAnimationType:(DHObjectAnimationType)animationType
 {
-    if (animationType == DHObjectAnimationTypeShredder) {
+    if (animationType == DHObjectAnimationTypeShredder || animationType == DHObjectAnimationTypeShimmer) {
         UIImageView *target = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
         target.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
         target.contentMode = UIViewContentModeScaleToFill;

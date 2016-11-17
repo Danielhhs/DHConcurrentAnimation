@@ -10,10 +10,10 @@
 
 @interface DHParticleEffect : NSObject {
     GLuint program;
-    GLuint texture;
+    GLuint texture, backgroundTexture;
     GLuint vertexBuffer;
     GLuint vertexArray;
-    GLuint mvpLoc, samplerLoc, percentLoc, directionLoc, eventLoc, elapsedTimeLoc;
+    GLuint mvpLoc, samplerLoc, percentLoc, directionLoc, eventLoc, elapsedTimeLoc, backgroundSamplerLoc;
 }
 
 @property (nonatomic) GLKMatrix4 mvpMatrix;

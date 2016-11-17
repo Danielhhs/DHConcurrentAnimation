@@ -46,6 +46,7 @@
     eventLoc = glGetUniformLocation(program, "u_event");
     directionLoc = glGetUniformLocation(program, "u_direction");
     elapsedTimeLoc = glGetUniformLocation(program, "u_elapsedTime");
+    backgroundSamplerLoc = glGetUniformLocation(program, "s_texBack");
     [self setupExtraUniforms];
 }
 
