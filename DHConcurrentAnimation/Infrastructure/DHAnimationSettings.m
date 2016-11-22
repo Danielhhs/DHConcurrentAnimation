@@ -105,6 +105,7 @@
             case DHObjectAnimationTypeScaleBig:
             case DHObjectAnimationTypeRotate:
             case DHObjectAnimationTypeShimmer:
+            case DHObjectAnimationTypeSparkle:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseInCubic;
                 break;
             case DHObjectAnimationTypeBlinds:
