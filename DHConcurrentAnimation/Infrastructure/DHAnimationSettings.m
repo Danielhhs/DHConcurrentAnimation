@@ -92,6 +92,7 @@
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutBack;
                 break;
             case DHObjectAnimationTypeShimmer:
+            case DHObjectAnimationTypeSparkle:
                 settings.timingFunction = NSBKeyframeAnimationFunctionEaseOutCubic;
                 break;
             default:

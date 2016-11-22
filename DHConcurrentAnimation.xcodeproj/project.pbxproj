@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54181B231DDDA34A00D26203 /* DHSparkleEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181B221DDDA34A00D26203 /* DHSparkleEffect.m */; };
+		54181B251DDDA84000D26203 /* ParticleSparkleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54181B241DDDA84000D26203 /* ParticleSparkleVertex.glsl */; };
+		54181B271DDDA84F00D26203 /* ParticleSparkleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54181B261DDDA84F00D26203 /* ParticleSparkleFragment.glsl */; };
+		54181B2B1DDDA95100D26203 /* DHObjectSparkleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54181B2A1DDDA95100D26203 /* DHObjectSparkleAnimation.m */; };
+		54181B371DE4482100D26203 /* ObjectSparkleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54181B361DE4482100D26203 /* ObjectSparkleVertex.glsl */; };
+		54181B391DE4482F00D26203 /* ObjectSparkleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54181B381DE4482F00D26203 /* ObjectSparkleFragment.glsl */; };
+		54181B3B1DE448D500D26203 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 54181B3A1DE448D500D26203 /* Sparkle.png */; };
 		541A85951DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 541A85941DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m */; };
 		541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */; };
 		541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 541A859E1DADCEFC001A9AE8 /* ObjectScaleVertex.glsl */; };
@@ -118,6 +125,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54181B211DDDA34A00D26203 /* DHSparkleEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHSparkleEffect.h; sourceTree = "<group>"; };
+		54181B221DDDA34A00D26203 /* DHSparkleEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHSparkleEffect.m; sourceTree = "<group>"; };
+		54181B241DDDA84000D26203 /* ParticleSparkleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSparkleVertex.glsl; sourceTree = "<group>"; };
+		54181B261DDDA84F00D26203 /* ParticleSparkleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSparkleFragment.glsl; sourceTree = "<group>"; };
+		54181B291DDDA95100D26203 /* DHObjectSparkleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectSparkleAnimation.h; sourceTree = "<group>"; };
+		54181B2A1DDDA95100D26203 /* DHObjectSparkleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectSparkleAnimation.m; sourceTree = "<group>"; };
+		54181B361DE4482100D26203 /* ObjectSparkleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectSparkleVertex.glsl; sourceTree = "<group>"; };
+		54181B381DE4482F00D26203 /* ObjectSparkleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectSparkleFragment.glsl; sourceTree = "<group>"; };
+		54181B3A1DE448D500D26203 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
 		541A85931DAD1AC7001A9AE8 /* DHObjectScaleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHObjectScaleAnimation.h; path = Scale/DHObjectScaleAnimation.h; sourceTree = "<group>"; };
 		541A85941DAD1AC7001A9AE8 /* DHObjectScaleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DHObjectScaleAnimation.m; path = Scale/DHObjectScaleAnimation.m; sourceTree = "<group>"; };
 		541A859D1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ObjectScaleFragment.glsl; path = Scale/ObjectScaleFragment.glsl; sourceTree = "<group>"; };
@@ -285,6 +301,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54181B201DDDA33700D26203 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				54181B3A1DE448D500D26203 /* Sparkle.png */,
+				54181B211DDDA34A00D26203 /* DHSparkleEffect.h */,
+				54181B221DDDA34A00D26203 /* DHSparkleEffect.m */,
+				54181B241DDDA84000D26203 /* ParticleSparkleVertex.glsl */,
+				54181B261DDDA84F00D26203 /* ParticleSparkleFragment.glsl */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
+		54181B281DDDA90B00D26203 /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				54181B291DDDA95100D26203 /* DHObjectSparkleAnimation.h */,
+				54181B2A1DDDA95100D26203 /* DHObjectSparkleAnimation.m */,
+				54181B361DE4482100D26203 /* ObjectSparkleVertex.glsl */,
+				54181B381DE4482F00D26203 /* ObjectSparkleFragment.glsl */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
 		541A858F1DAD1A80001A9AE8 /* Scale */ = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +606,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				54181B281DDDA90B00D26203 /* Sparkle */,
 				54DC3DD91DBE2C9B00570620 /* Shimmer */,
 				542C19E61DBE106400F7B6F4 /* Compress */,
 				542C18F01DB7719600F7B6F4 /* Shredder */,
@@ -626,6 +666,7 @@
 		54DC3DC41DBE1ECC00570620 /* Particle Effects */ = {
 			isa = PBXGroup;
 			children = (
+				54181B201DDDA33700D26203 /* Sparkle */,
 				54DC3DC81DBE258400570620 /* Shimmer */,
 			);
 			path = "Particle Effects";
@@ -779,9 +820,11 @@
 				542C19051DB78C7E00F7B6F4 /* ObjectShredderConfettiFragment.glsl in Resources */,
 				542C19EB1DBE108F00F7B6F4 /* ObjectCompressVertex.glsl in Resources */,
 				5455784F1D7FBE5000D6DAC1 /* 2.jpg in Resources */,
+				54181B371DE4482100D26203 /* ObjectSparkleVertex.glsl in Resources */,
 				5455784D1D7FBE5000D6DAC1 /* 0.jpg in Resources */,
 				541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */,
 				54DC3DE31DBE328F00570620 /* ObjectShimmerFragment.glsl in Resources */,
+				54181B3B1DE448D500D26203 /* Sparkle.png in Resources */,
 				542C18E11DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl in Resources */,
 				545578521D7FBE5000D6DAC1 /* 5.jpg in Resources */,
 				545578531D7FBE5000D6DAC1 /* 6.jpg in Resources */,
@@ -793,13 +836,16 @@
 				541A85F51DAE0020001A9AE8 /* ObjectScaleBigFragment.glsl in Resources */,
 				5484BD2B1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl in Resources */,
 				5484BD291DAF1EDC003387D9 /* ObjectBlindsVertex.glsl in Resources */,
+				54181B391DE4482F00D26203 /* ObjectSparkleFragment.glsl in Resources */,
 				545578021D7FA4CD00D6DAC1 /* Main.storyboard in Resources */,
+				54181B271DDDA84F00D26203 /* ParticleSparkleFragment.glsl in Resources */,
 				5484BD311DAFA63E003387D9 /* ObjectRotateVertex.glsl in Resources */,
 				5484BD331DAFA64C003387D9 /* ObjectRotateFragment.glsl in Resources */,
 				54DC3DD81DBE2C6500570620 /* ParticleShiningStarFragment.glsl in Resources */,
 				5484BD201DAE612E003387D9 /* ObjectDropFragment.glsl in Resources */,
 				54C373301D87ED9D0021E2F2 /* ObjectClothLineVertex.glsl in Resources */,
 				545578501D7FBE5000D6DAC1 /* 3.jpg in Resources */,
+				54181B251DDDA84000D26203 /* ParticleSparkleVertex.glsl in Resources */,
 				54DC3DCF1DBE268E00570620 /* ParticleShimmerFragment.glsl in Resources */,
 				542C190A1DB78C7E00F7B6F4 /* ObjectShredderVertex.glsl in Resources */,
 				5484BD1E1DAE6120003387D9 /* ObjectDropVertex.glsl in Resources */,
@@ -872,8 +918,10 @@
 				54A52FB41D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m in Sources */,
 				545577F91D7FA4CD00D6DAC1 /* main.m in Sources */,
 				5460E7091D8FD155000CC5D1 /* DHObjectAnimationPresentationViewController.m in Sources */,
+				54181B231DDDA34A00D26203 /* DHSparkleEffect.m in Sources */,
 				54C3732E1D87ED900021E2F2 /* DHObjectClothLineSceneMesh.m in Sources */,
 				549FCE061D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m in Sources */,
+				54181B2B1DDDA95100D26203 /* DHObjectSparkleAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
