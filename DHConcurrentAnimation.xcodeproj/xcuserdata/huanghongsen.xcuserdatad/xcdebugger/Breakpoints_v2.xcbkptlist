@@ -96,7 +96,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DHConcurrentAnimation/Infrastructure/OpenGL Helpers/DHTextureLoader.m"
@@ -218,6 +218,22 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "-setRowCount:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DHConcurrentAnimation/Animations/Particle Effects/Dust/DHDustEffect.m"
+            timestampString = "502630831.818534"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "-updateWithElapsedTime:percent:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

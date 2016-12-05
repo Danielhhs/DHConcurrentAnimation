@@ -20,6 +20,7 @@
 #import "DHObjectCompressAnimation.h"
 #import "DHObjectShimmerAnimation.h"
 #import "DHObjectSparkleAnimation.h"
+#import "DHObjectSkidAnimation.h"
 
 static NSArray *transitions;
 static NSArray *builtInAnimations;
@@ -55,6 +56,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeShimmer;
     } else if ([animationName isEqualToString:@"Sparkle"]) {
         return DHObjectAnimationTypeSparkle;
+    } else if ([animationName isEqualToString:@"Skid"]) {
+        return DHObjectAnimationTypeSkid;
     }
     return DHObjectAnimationTypeNone;
 }
@@ -71,7 +74,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtInAnimations
 {
     if (!builtInAnimations) {
-        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds", @"Rotate", @"Confetti", @"Shimmer", @"Sparkle"];
+        builtInAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Drop", @"Blinds", @"Rotate", @"Confetti", @"Shimmer", @"Sparkle", @"Skid"];
     }
     return builtInAnimations;
 }
@@ -79,7 +82,7 @@ static NSArray *textAnimations;
 + (NSArray *) builtOutAnimations
 {
     if (!builtOutAnimations) {
-        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti", @"Shredder", @"Compress", @"Shimmer", @"Sparkle"];
+        builtOutAnimations = @[@"ClothLine", @"Fold", @"Scale", @"Scale Big", @"Blinds", @"Rotate", @"Confetti", @"Shredder", @"Compress", @"Shimmer", @"Sparkle", @"Skid"];
     }
     return builtOutAnimations;
 }
@@ -164,6 +167,10 @@ static NSArray *textAnimations;
         }
         case DHObjectAnimationTypeSparkle: {
             animation = [[DHObjectSparkleAnimation alloc] init];
+            break;
+        }
+        case DHObjectAnimationTypeSkid: {
+            animation = [[DHObjectSkidAnimation alloc] init];
             break;
         }
         default:
