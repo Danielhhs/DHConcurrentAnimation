@@ -9,17 +9,9 @@
 #import "DHDustEffect.h"
 #import <OpenGLES/ES3/glext.h>
 #import "NSBKeyframeAnimationFunctions.h"
-typedef struct {
-    GLKVector3 startPosition;
-    GLKVector3 targetPosition;
-    GLfloat startPointSize;
-    GLfloat targetPointSize;
-    GLfloat rotation;
-    GLfloat aLifeTime;
-}DHDustEffectAttributes;
 
 
-#define PARTICLE_COUNT 150
+#define PARTICLE_COUNT 200
 #define MAX_PARTICLE_SIZE 1000
 
 @interface DHDustEffect ()
@@ -50,11 +42,7 @@ typedef struct {
 {
     self.particleData = [NSMutableData data];
     self.maxHeight = self.targetView.frame.size.height;
-    if (self.direction == DHDustEffectDirectionAll) {
-        [self generateParticleDataForAllDirections];
-    } else {
-        [self generateParticleDataForSingleDirection];
-    }
+    [self generateParticleDataForSingleDirection];
     [self prepareToDraw];
 }
 
@@ -76,11 +64,6 @@ typedef struct {
         [self.particleData appendBytes:&dust length:sizeof(dust)];
     }
 
-}
-
-- (void) generateParticleDataForAllDirections
-{
-    
 }
 
 - (GLKVector3) randomTargetPositionForSingleDirectionForEmissionPosition:(GLKVector3)emissionPosition

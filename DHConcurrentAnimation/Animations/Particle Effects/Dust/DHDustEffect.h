@@ -11,8 +11,16 @@
 typedef NS_ENUM(NSInteger, DHDustEffectDirection) {
     DHDustEffectDirectionLeftToRight,
     DHDustEffectDirectionRightToLeft,
-    DHDustEffectDirectionAll,
 };
+
+typedef struct {
+    GLKVector3 startPosition;
+    GLKVector3 targetPosition;
+    GLfloat startPointSize;
+    GLfloat targetPointSize;
+    GLfloat rotation;
+    GLfloat aLifeTime;
+}DHDustEffectAttributes;
 
 @interface DHDustEffect : DHParticleEffect
 

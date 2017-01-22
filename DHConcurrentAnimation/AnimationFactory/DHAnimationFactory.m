@@ -58,6 +58,8 @@ static NSArray *textAnimations;
         return DHObjectAnimationTypeSparkle;
     } else if ([animationName isEqualToString:@"Skid"]) {
         return DHObjectAnimationTypeSkid;
+    } else if ([animationName isEqualToString:@"Anvil"]) {
+        
     }
     return DHObjectAnimationTypeNone;
 }

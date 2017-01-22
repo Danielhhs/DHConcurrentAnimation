@@ -89,6 +89,12 @@
 		5484BD331DAFA64C003387D9 /* ObjectRotateFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 5484BD321DAFA64C003387D9 /* ObjectRotateFragment.glsl */; };
 		549FCE061D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 549FCE051D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m */; };
 		54A52FB41D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A52FB31D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m */; };
+		54ACFCD31DF5934B00D09A60 /* DHAnvilDustEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ACFCD21DF5934B00D09A60 /* DHAnvilDustEffect.m */; };
+		54ACFCD51DF5944200D09A60 /* ParticleAnvilDustVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54ACFCD41DF5944200D09A60 /* ParticleAnvilDustVertex.glsl */; };
+		54ACFCD71DF5945200D09A60 /* ParticleAnvilDustFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54ACFCD61DF5945200D09A60 /* ParticleAnvilDustFragment.glsl */; };
+		54ACFCDB1DF599C300D09A60 /* DHAnvilAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54ACFCDA1DF599C300D09A60 /* DHAnvilAnimation.m */; };
+		54ACFCDD1DF59F0600D09A60 /* ObjectAnvilVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54ACFCDC1DF59F0600D09A60 /* ObjectAnvilVertex.glsl */; };
+		54ACFCDF1DF59F1200D09A60 /* ObjectAnvilFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 54ACFCDE1DF59F1200D09A60 /* ObjectAnvilFragment.glsl */; };
 		54C373181D86453F0021E2F2 /* DHAnimationSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C373171D86453F0021E2F2 /* DHAnimationSceneMesh.m */; };
 		54C3731B1D8645880021E2F2 /* DHAnimationSplitSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3731A1D8645880021E2F2 /* DHAnimationSplitSceneMesh.m */; };
 		54C3731E1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3731D1D8645990021E2F2 /* DHAnimationContinousSceneMesh.m */; };
@@ -250,6 +256,14 @@
 		549FCE051D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAddedAnimationsTableViewController.m; sourceTree = "<group>"; };
 		54A52FB21D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHObjectAnimationSettingsTableViewController.h; sourceTree = "<group>"; };
 		54A52FB31D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHObjectAnimationSettingsTableViewController.m; sourceTree = "<group>"; };
+		54ACFCD11DF5934B00D09A60 /* DHAnvilDustEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnvilDustEffect.h; sourceTree = "<group>"; };
+		54ACFCD21DF5934B00D09A60 /* DHAnvilDustEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnvilDustEffect.m; sourceTree = "<group>"; };
+		54ACFCD41DF5944200D09A60 /* ParticleAnvilDustVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleAnvilDustVertex.glsl; sourceTree = "<group>"; };
+		54ACFCD61DF5945200D09A60 /* ParticleAnvilDustFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleAnvilDustFragment.glsl; sourceTree = "<group>"; };
+		54ACFCD91DF599C300D09A60 /* DHAnvilAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnvilAnimation.h; sourceTree = "<group>"; };
+		54ACFCDA1DF599C300D09A60 /* DHAnvilAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnvilAnimation.m; sourceTree = "<group>"; };
+		54ACFCDC1DF59F0600D09A60 /* ObjectAnvilVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectAnvilVertex.glsl; sourceTree = "<group>"; };
+		54ACFCDE1DF59F1200D09A60 /* ObjectAnvilFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ObjectAnvilFragment.glsl; sourceTree = "<group>"; };
 		54C373161D86453F0021E2F2 /* DHAnimationSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationSceneMesh.h; sourceTree = "<group>"; };
 		54C373171D86453F0021E2F2 /* DHAnimationSceneMesh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHAnimationSceneMesh.m; sourceTree = "<group>"; };
 		54C373191D8645880021E2F2 /* DHAnimationSplitSceneMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHAnimationSplitSceneMesh.h; sourceTree = "<group>"; };
@@ -348,6 +362,10 @@
 				54181B3E1DE471AA00D26203 /* DHDustEffect.m */,
 				54181B401DE471B700D26203 /* ParticleDustVertex.glsl */,
 				54181B421DE471C300D26203 /* ParticleDustFragment.glsl */,
+				54ACFCD11DF5934B00D09A60 /* DHAnvilDustEffect.h */,
+				54ACFCD21DF5934B00D09A60 /* DHAnvilDustEffect.m */,
+				54ACFCD41DF5944200D09A60 /* ParticleAnvilDustVertex.glsl */,
+				54ACFCD61DF5945200D09A60 /* ParticleAnvilDustFragment.glsl */,
 			);
 			path = Dust;
 			sourceTree = "<group>";
@@ -602,6 +620,17 @@
 			path = Rotate;
 			sourceTree = "<group>";
 		};
+		54ACFCD81DF599B400D09A60 /* Anvil */ = {
+			isa = PBXGroup;
+			children = (
+				54ACFCD91DF599C300D09A60 /* DHAnvilAnimation.h */,
+				54ACFCDA1DF599C300D09A60 /* DHAnvilAnimation.m */,
+				54ACFCDC1DF59F0600D09A60 /* ObjectAnvilVertex.glsl */,
+				54ACFCDE1DF59F1200D09A60 /* ObjectAnvilFragment.glsl */,
+			);
+			path = Anvil;
+			sourceTree = "<group>";
+		};
 		54C373151D86453F0021E2F2 /* SceneMesh */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,6 +674,7 @@
 		54C373241D87ECC00021E2F2 /* ObjectAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				54ACFCD81DF599B400D09A60 /* Anvil */,
 				545B77641DEDA621003DA5A3 /* Skid */,
 				54181B281DDDA90B00D26203 /* Sparkle */,
 				54DC3DD91DBE2C9B00570620 /* Shimmer */,
@@ -867,12 +897,14 @@
 				541A85A01DADCEFC001A9AE8 /* ObjectScaleVertex.glsl in Resources */,
 				54DC3DE31DBE328F00570620 /* ObjectShimmerFragment.glsl in Resources */,
 				54181B3B1DE448D500D26203 /* Sparkle.png in Resources */,
+				54ACFCDD1DF59F0600D09A60 /* ObjectAnvilVertex.glsl in Resources */,
 				542C18E11DB4EC0700F7B6F4 /* ObjectConfettiVertex.glsl in Resources */,
 				545B776B1DEDA7D6003DA5A3 /* ObjectSkidFragment.glsl in Resources */,
 				545578521D7FBE5000D6DAC1 /* 5.jpg in Resources */,
 				545578531D7FBE5000D6DAC1 /* 6.jpg in Resources */,
 				545578071D7FA4CD00D6DAC1 /* LaunchScreen.storyboard in Resources */,
 				542C19081DB78C7E00F7B6F4 /* ObjectShredderPiecesFragment.glsl in Resources */,
+				54ACFCD71DF5945200D09A60 /* ParticleAnvilDustFragment.glsl in Resources */,
 				541A859F1DADCEFC001A9AE8 /* ObjectScaleFragment.glsl in Resources */,
 				545578041D7FA4CD00D6DAC1 /* Assets.xcassets in Resources */,
 				54DC3DD61DBE2C5300570620 /* ParticleShiningStarVertex.glsl in Resources */,
@@ -880,12 +912,14 @@
 				5484BD2B1DAF1EEA003387D9 /* ObjectBlindsFragment.glsl in Resources */,
 				5484BD291DAF1EDC003387D9 /* ObjectBlindsVertex.glsl in Resources */,
 				54181B391DE4482F00D26203 /* ObjectSparkleFragment.glsl in Resources */,
+				54ACFCDF1DF59F1200D09A60 /* ObjectAnvilFragment.glsl in Resources */,
 				545578021D7FA4CD00D6DAC1 /* Main.storyboard in Resources */,
 				54181B271DDDA84F00D26203 /* ParticleSparkleFragment.glsl in Resources */,
 				5484BD311DAFA63E003387D9 /* ObjectRotateVertex.glsl in Resources */,
 				5484BD331DAFA64C003387D9 /* ObjectRotateFragment.glsl in Resources */,
 				54181B411DE471B700D26203 /* ParticleDustVertex.glsl in Resources */,
 				54DC3DD81DBE2C6500570620 /* ParticleShiningStarFragment.glsl in Resources */,
+				54ACFCD51DF5944200D09A60 /* ParticleAnvilDustVertex.glsl in Resources */,
 				5484BD201DAE612E003387D9 /* ObjectDropFragment.glsl in Resources */,
 				54C373301D87ED9D0021E2F2 /* ObjectClothLineVertex.glsl in Resources */,
 				545B77631DED97DF003DA5A3 /* dust.png in Resources */,
@@ -964,12 +998,14 @@
 				545578341D7FA58500D6DAC1 /* DHAnimationSettings.m in Sources */,
 				54C3731B1D8645880021E2F2 /* DHAnimationSplitSceneMesh.m in Sources */,
 				54A52FB41D910FA2007F9A76 /* DHObjectAnimationSettingsTableViewController.m in Sources */,
+				54ACFCDB1DF599C300D09A60 /* DHAnvilAnimation.m in Sources */,
 				545577F91D7FA4CD00D6DAC1 /* main.m in Sources */,
 				5460E7091D8FD155000CC5D1 /* DHObjectAnimationPresentationViewController.m in Sources */,
 				54181B231DDDA34A00D26203 /* DHSparkleEffect.m in Sources */,
 				54C3732E1D87ED900021E2F2 /* DHObjectClothLineSceneMesh.m in Sources */,
 				549FCE061D9BC11E0097CEF1 /* DHAddedAnimationsTableViewController.m in Sources */,
 				54181B2B1DDDA95100D26203 /* DHObjectSparkleAnimation.m in Sources */,
+				54ACFCD31DF5934B00D09A60 /* DHAnvilDustEffect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
